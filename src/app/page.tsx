@@ -1,4 +1,4 @@
-import { AnimatedBackground } from "@/app/components/animated-background"
+import { AnimatedBackground } from "@/app/components/background"
 import ProfileSidebar from "./content/profile/page"
 import  {ContentSection}  from "./content/page"
 import Toggle from "./components/theme-toggle"

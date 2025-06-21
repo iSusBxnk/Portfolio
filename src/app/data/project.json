@@ -1,0 +1,18 @@
+[
+  {
+    "id": "smeprofile dashboard v.2",
+    "title": "SME Profile Dashboard v.2",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nostrum ullam voluptas optio sit omnis doloremque odio corrupti minima, doloribus,",
+    "image": "/smeprofile.png",
+    "technologies": ["NextJS", "TailwindCSS", "Golang", "AWS","PostgreSQL","Docker"],
+    "link": "#"
+  },
+  {
+    "id": "smeprofile dashboard v.1",
+    "title": "SME Profile Dashboard v.2",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nostrum ullam voluptas optio sit omnis doloremque odio corrupti minima, doloribus,",
+    "image": "/smeprofile.png",
+    "technologies": ["NextJS", "TailwindCSS", "Golang", "AWS","PostgreSQL","Docker"],
+    "link": "#"
+  }
+]

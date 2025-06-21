@@ -34,9 +34,9 @@ export default function ProfileSidebar() {
       <div className="space-y-8">
         <div className="space-y-4">
           <Link href="#about" className="text-4xl lg:text-5xl font-bold text-amber-400 tracking-tight">Chayakorn Phukhiao</Link>
-          <h2 className="text-xl lg:text-2xl font-medium text-slate-200">Front End Engineer</h2>
+          <h2 className="text-xl lg:text-2xl font-medium text-slate-200">Front End Developer</h2>
           <p className="text-slate-400 text-lg leading-relaxed max-w-xs">
-            I build accessible, pixel-perfect digital experiences for the web.
+            A passionate front-end developer dedicated to crafting exceptional digital experiences.
           </p>
         </div>
 

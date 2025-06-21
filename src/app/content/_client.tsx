@@ -6,7 +6,7 @@ function _client() {
   return (
     <div className="space-y-16 md:space-y-24">
       <About />
-      <Experience />
+      {/* <Experience /> */}
       <Project />
       <footer className="text-center text-slate-500 text-sm py-8">
         <p>

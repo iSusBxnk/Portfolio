@@ -4,7 +4,7 @@ import React from 'react'
 function page() {
   return (
             <section id="experience" className="space-y-8">
-                <div className="group bg-slate-800/50 border border-slate-700 rounded-lg hover:bg-slate-800/80 transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10 cursor-pointer">
+                <div className="group bg-slate-800/50 border border-slate-700 rounded-lg hover:bg-slate-800/80 hover:border transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10 cursor-pointer">
                     <div className="p-6">
                         <div className="flex flex-col lg:flex-row lg:items-start space-y-4 lg:space-y-0 lg:space-x-6">
                             <div className="text-xs font-semibold text-slate-500 uppercase tracking-wide lg:w-32 flex-shrink-0">
