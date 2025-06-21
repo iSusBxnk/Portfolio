@@ -1,18 +1,58 @@
 [
   {
-    "id": "smeprofile dashboard v.2",
+    "id": "SME Profile Dashboard v.2",
     "title": "SME Profile Dashboard v.2",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nostrum ullam voluptas optio sit omnis doloremque odio corrupti minima, doloribus,",
+    "description": "A centralized database website that consolidates data from SMEs (Small and Medium Enterprises) and government agencies to enable data integration and utilization for analyzing entrepreneurial demand trends and efficiently presenting government services and support.",
     "image": "/smeprofile.png",
     "technologies": ["NextJS", "TailwindCSS", "Golang", "AWS","PostgreSQL","Docker"],
+    "link": "https://smeprofile.org/login"
+  },
+  {
+    "id": "Lanna-Koyori Project",
+    "title": "Lanna-Koyori Project",
+    "description": "Koyori project website, a collaboration between Thai and Japanese designers with artisans in Northern Thailand, operated under the Lanna Culture and Handicraft Association (LCCA) and Rajamangala University of Technology Lanna.",
+    "image": "/koyori.png",
+    "technologies": ["NextJS", "TailwindCSS", "PostgreSQL","Supabase"],
+    "link": "https://www.lannakoyori.org/"
+  },
+  {
+    "id": "3",
+    "title": "SME Profile Dashboard v.2",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": "/smeprofile.png",
+    "technologies": ["NextJS", "TailwindCSS"],
     "link": "#"
   },
   {
-    "id": "smeprofile dashboard v.1",
+    "id": "4",
     "title": "SME Profile Dashboard v.2",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis nostrum ullam voluptas optio sit omnis doloremque odio corrupti minima, doloribus,",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     "image": "/smeprofile.png",
-    "technologies": ["NextJS", "TailwindCSS", "Golang", "AWS","PostgreSQL","Docker"],
+    "technologies": ["NextJS", "TailwindCSS"],
+    "link": "#"
+  },
+  {
+    "id": "5",
+    "title": "SME Profile Dashboard v.2",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": "/smeprofile.png",
+    "technologies": ["NextJS", "TailwindCSS"],
+    "link": "#"
+  },
+  {
+    "id": "6",
+    "title": "SME Profile Dashboard v.2",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": "/smeprofile.png",
+    "technologies": ["NextJS", "TailwindCSS"],
+    "link": "#"
+  },
+  {
+    "id": "8",
+    "title": "SME Profile Dashboard v.2",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": "/smeprofile.png",
+    "technologies": ["NextJS", "TailwindCSS"],
     "link": "#"
   }
 ]

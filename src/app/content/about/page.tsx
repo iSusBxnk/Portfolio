@@ -3,7 +3,10 @@ import React from 'react'
 
 function page() {
     return (
-        <section id="about" className="space-y-6">
+        <section id="about" className="space-y-2">
+        <div className="">
+            <p className="text-xl text-white font-bold">About me</p>
+        </div>
             <div className="space-y-4 text-slate-400 leading-relaxed">
                 <p>
                     I am a <span className='text-amber-400 '>Frontend Web Developer</span> who is passionate about creating great experiences that are well-balanced and appropriately designed in every dimension,
