@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useEffect, useRef } from "react"
 
 interface AnimatedBackgroundProps {
@@ -16,64 +15,69 @@ export function AnimatedBackground({ children, className = "" }: AnimatedBackgro
     const handleMouseMove = (e: MouseEvent) => {
       if (!backgroundRef.current) return
 
-      const { clientX, clientY } = e
-      const { innerWidth, innerHeight } = window
+      // ใช้ตำแหน่งเมาส์จาก viewport โดยตรง (clientX, clientY)
+      // ไม่ต้องคำนวณสัมพันธ์กับ element เพราะเราต้องการให้ทำงานตาม viewport
+      const viewportWidth = window.innerWidth
+      const viewportHeight = window.innerHeight
+      
+      // แปลงตำแหน่งเมาส์เป็นเปอร์เซ็นต์ของ viewport
+      const xPercent = (e.clientX / viewportWidth) * 100
+      const yPercent = (e.clientY / viewportHeight) * 100
 
-      // Convert mouse position to percentage
-      const xPercent = (clientX / innerWidth) * 100
-      const yPercent = (clientY / innerHeight) * 100
+      // จำกัดค่าให้อยู่ในช่วง 0-100%
+      const clampedX = Math.max(0, Math.min(100, xPercent))
+      const clampedY = Math.max(0, Math.min(100, yPercent))
 
       // Update CSS custom properties
-      backgroundRef.current.style.setProperty("--mouse-x", `${xPercent}%`)
-      backgroundRef.current.style.setProperty("--mouse-y", `${yPercent}%`)
+      backgroundRef.current.style.setProperty("--mouse-x", `${clampedX}%`)
+      backgroundRef.current.style.setProperty("--mouse-y", `${clampedY}%`)
     }
 
-    window.addEventListener("mousemove", handleMouseMove)
-    return () => window.removeEventListener("mousemove", handleMouseMove)
+    document.addEventListener("mousemove", handleMouseMove)
+    return () => document.removeEventListener("mousemove", handleMouseMove)
   }, [])
 
   return (
     <div
       ref={backgroundRef}
       className={`
-        min-h-screen w-full relative overflow-hidden
-        bg-gradient-to-br from-blue-50 via-white to-purple-50
-        dark:from-gray-900 dark:via-gray-800 dark:to-purple-900
-        transition-colors duration-500
+        min-h-screen w-full relative
         ${className}
       `}
-      style={{
-        background: `
-          radial-gradient(
-            3000px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-           rgba(60, 0, 255, 0.3),
-            transparent 40%
-          ),
-          radial-gradient(
-            1000px circle at calc(var(--mouse-x, 50%) + 100px) calc(var(--mouse-y, 50%) + 100px),
-              rgba(0, 136, 255, 0.2),
-            transparent 40%
-          ),
-          linear-gradient(
-            135deg,
-            rgba(239, 246, 255) 0%,
-            rgba(255, 255, 255) 50%,
-            rgba(250, 245, 255) 100%
-          )
-        `,
-      }}
     >
-      {/* Dark mode overlay */}
-      <div className="absolute inset-0 bg-gray-900/0 dark:bg-[#0f172a] transition-all duration-500 pointer-events-none" />
-
-      {/* Animated gradient overlay for dark mode */}
-      <div
-        className="absolute inset-0 opacity-0 dark:opacity-100 transition-opacity duration-500 pointer-events-none"
+      {/* <div 
+        className="fixed inset-0 pointer-events-none z-0"
         style={{
           background: `
             radial-gradient(
               3000px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-              
+              rgba(60, 0, 255, 0.3),
+              transparent 40%
+            ),
+            radial-gradient(
+              1000px circle at calc(var(--mouse-x, 50%) + 100px) calc(var(--mouse-y, 50%) + 100px),
+              rgba(0, 136, 255, 0.2),
+              transparent 40%
+            ),
+            linear-gradient(
+              135deg,
+              rgba(239, 246, 255) 0%,
+              rgba(255, 255, 255) 50%,
+              rgba(250, 245, 255) 100%
+            )
+          `,
+        }}
+      /> */}
+
+      <div className="fixed inset-0 bg-gray-900/0 dark:bg-[#0f172a] transition-all duration-500 pointer-events-none z-[1]" />
+
+      <div
+        className="fixed inset-0 opacity-0 dark:opacity-100 transition-opacity duration-500 pointer-events-none z-[2]"
+        style={{
+          background: `
+            radial-gradient(
+              3000px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+              rgba(60, 0, 255, 0.20),
               transparent 40%
             ),
             radial-gradient(
@@ -85,7 +89,7 @@ export function AnimatedBackground({ children, className = "" }: AnimatedBackgro
         }}
       />
 
-      {/* Content */}
+      {/* Content - z-index สูงกว่า background layers */}
       <div className="relative z-10">{children}</div>
     </div>
   )
