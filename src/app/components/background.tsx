@@ -35,7 +35,7 @@ export function AnimatedBackground({ children, className = "" }: AnimatedBackgro
   return (
     <div
       ref={backgroundRef}
-      className={`min-h-screen w-full relative overflow-hidden ${className}`}
+      className={`min-h-screen w-full relative  ${className}`}
     >
       {/* พื้นหลัง layer 1 */}
       <div className="fixed inset-0 bg-slate-900 pointer-events-none z-0" />
