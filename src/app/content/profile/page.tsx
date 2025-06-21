@@ -2,7 +2,7 @@
 
 import { Github, Linkedin, Mail, ExternalLink } from "lucide-react"
 import { useEffect, useState } from "react"
-
+import Link from "next/link"
 export default function ProfileSidebar() {
   const [bounceClass, setBounceClass] = useState("")
 
@@ -33,7 +33,7 @@ export default function ProfileSidebar() {
     <>
       <div className="space-y-8">
         <div className="space-y-4">
-          <h1 className="text-4xl lg:text-5xl font-bold text-slate-200 tracking-tight">Chayakorn Phukhiao</h1>
+          <Link href="#about" className="text-4xl lg:text-5xl font-bold text-amber-400 tracking-tight">Chayakorn Phukhiao</Link>
           <h2 className="text-xl lg:text-2xl font-medium text-slate-200">Front End Engineer</h2>
           <p className="text-slate-400 text-lg leading-relaxed max-w-xs">
             I build accessible, pixel-perfect digital experiences for the web.

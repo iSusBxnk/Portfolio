@@ -69,15 +69,14 @@ export function AnimatedBackground({ children, className = "" }: AnimatedBackgro
         }}
       /> */}
 
-      <div className="fixed inset-0 bg-gray-900/0 dark:bg-[#0f172a] transition-all duration-500 pointer-events-none z-[1]" />
-
+      <div className="fixed inset-0 bg-gray-900/0 bg-[#0c0e1c] transition-all duration-500 pointer-events-none z-[1]" />
       <div
         className="fixed inset-0 opacity-0 dark:opacity-100 transition-opacity duration-500 pointer-events-none z-[2]"
         style={{
           background: `
             radial-gradient(
               3000px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-              rgba(60, 0, 255, 0.20),
+              rgba(15,23,42, 0.15),
               transparent 40%
             ),
             radial-gradient(
@@ -89,7 +88,6 @@ export function AnimatedBackground({ children, className = "" }: AnimatedBackgro
         }}
       />
 
-      {/* Content - z-index สูงกว่า background layers */}
       <div className="relative z-10">{children}</div>
     </div>
   )

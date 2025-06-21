@@ -6,13 +6,13 @@ import Toggle from "./components/theme-toggle"
 export default function Home() {
   return (
     <AnimatedBackground>
-      <div className="container mx-auto min-h-screen flex gap-4 px-6 md:px-20 py-8 md:py-20">
-        <div className="sticky top-20 w-1/2 lg:w-full h-full">
+      <div className="container mx-auto px-20 min-h-screen flex gap-6 py-8 md:py-20">
+        <div className="sticky top-20 w-1/2 lg:w-full h-full pl-20">
           <ProfileSidebar />
-          <Toggle /> 
+          {/* <Toggle />  */}
         </div>
 
-        <div className="w-1/2 lg:w-full">
+        <div className="w-1/2 lg:w-full pr-20">
           <ContentSection />
         </div>
       </div>

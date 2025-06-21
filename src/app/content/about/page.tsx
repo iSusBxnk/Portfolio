@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 function page() {
@@ -5,30 +6,16 @@ function page() {
         <section id="about" className="space-y-6">
             <div className="space-y-4 text-slate-400 leading-relaxed">
                 <p>
-                    I'm a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful
-                    design with robust engineering. My favorite work lies at the intersection of design and development,
-                    creating experiences that not only look great but are meticulously built for performance and usability.
+                    I am a <span className='text-amber-400 '>Frontend Web Developer</span> who is passionate about creating great experiences that are well-balanced and appropriately designed in every dimension,
+                     paying attention to every pixel detail to deliver user interfaces that are accessible and easy to use,
+                     while committed to building high-performance websites that follow best development practices to create sustainable solutions that truly serve users' needs.
                 </p>
                 <p>
-                    Currently, I'm a Senior Front-End Engineer at{" "}
-                    <span className="text-teal-300 hover:text-teal-200 transition-colors cursor-pointer">Klaviyo</span>,
-                    specializing in accessibility. I contribute to the creation and maintenance of UI components that power
-                    Klaviyo's frontend, ensuring our platform meets web accessibility standards and best practices to deliver an
-                    inclusive user experience.
+                   Currently, I work as a Junior Front-End Developer at <span className='text-amber-400 font-semibold'><Link href="https://spacetrax.co/" target="_blank">SPACETRAX CO., LTD.</Link></span><br/>
+                    My primary responsibilities include developing and maintaining UI components to align with specified designs, as well as writing code according to systematically designed workflows. I prioritize web accessibility standards and best practices to ensure users receive the most comprehensive and 
+                   efficient experience from every project we develop.
                 </p>
-                <p>
-                    In the past, I've had the opportunity to develop software across a variety of settings — from{" "}
-                    <span className="text-teal-300">advertising agencies</span> and{" "}
-                    <span className="text-teal-300">large corporations</span> to{" "}
-                    <span className="text-teal-300">start-ups</span> and{" "}
-                    <span className="text-teal-300">small digital product studios</span>. Additionally, I also released a{" "}
-                    <span className="text-teal-300">comprehensive video course</span> a few years ago, guiding learners through
-                    building a web app with the Spotify API.
-                </p>
-                <p>
-                    In my spare time, I'm usually climbing, reading, hanging out with my wife and two cats, or running around
-                    Hyrule searching for <span className="text-teal-300">Korok seeds</span>.
-                </p>
+              
             </div>
         </section>
     )
