@@ -42,7 +42,7 @@ function ProjectsPage({ addSectionId }: ProjectProps) {
   }
 
   return (
-    <section id={SECTION_ID} className="space-y-2 scroll-m-14">
+    <section id={SECTION_ID} className="space-y-2 scroll-m-24">
       <div className="pb-4">
         <p className="text-2xl text-white font-bold">Project</p>
       </div>

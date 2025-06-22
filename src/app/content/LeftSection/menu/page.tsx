@@ -48,7 +48,7 @@ export default function Menu({menuItems, currentSection}: MenuItemProps) {
           className={`w-fit group flex items-center space-x-4 ${currentSection === item.id ? "text-teal-300" : isMouseEnter[item.id] ? "text-slate-200" : "text-slate-400"} transition-colors duration-200 ${bounceClass}`}
         >
           <div className={`h-px ${currentSection === item.id ? "bg-slate-200 w-16" : isMouseEnter[item.id] ? "bg-slate-200 w-16" : "bg-slate-400 w-8"} transition-all duration-200`}></div>
-          <span className="text-xs font-bold uppercase tracking-widest">{item.label}</span>
+          <span className="text-sm font-bold uppercase tracking-widest">{item.label}</span>
         </button>
       ))}
     </div>

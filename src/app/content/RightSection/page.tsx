@@ -8,7 +8,7 @@ interface RightSectionProps {
 }
 export default function RightSection({addSectionId}: RightSectionProps) {
     return (
-        <div className="space-y-16 lg:space-y-24 mb-14">
+        <div className="space-y-16 lg:space-y-24 mb-24">
           <About addSectionId={addSectionId}/>
           <Experience addSectionId={addSectionId}/>
           <Project addSectionId={addSectionId}/>

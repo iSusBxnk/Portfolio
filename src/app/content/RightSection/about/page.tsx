@@ -15,7 +15,7 @@ function About ({ addSectionId }: AboutProps) {
     }, [])
 
     return (
-        <section id={SECTION_ID} className="scroll-m-14">
+        <section id={SECTION_ID} className="scroll-m-24">
             <div className="pb-4">
                 <p className="text-xl text-white font-bold">About me</p>
             </div>

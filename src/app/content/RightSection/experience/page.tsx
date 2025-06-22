@@ -13,7 +13,7 @@ function Experience({ addSectionId }: ExperienceProps) {
     }, [])
 
     return (
-        <section id={SECTION_ID} className="space-y-8 lg:space-y-12 scroll-m-14">
+        <section id={SECTION_ID} className="scroll-m-24">
             <div className="pb-4">
                 <p className="text-xl text-white font-bold">Experience</p>
             </div>
