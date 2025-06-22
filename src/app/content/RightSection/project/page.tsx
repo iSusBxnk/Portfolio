@@ -1,18 +1,29 @@
-// project/page.tsx
 "use client"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { ProjectCard } from "@/app/_partial/ProjectCard"
 import type { Project } from "@/app/_partial/ProjectCard"
 import projectsData from "@/app/data/project.json" // data
 
-function ProjectsPage() {
+interface ProjectProps {
+  addSectionId: (sectionId: string) => void;
+}
+const SECTION_ID = 'projects'
+
+
+function ProjectsPage({ addSectionId }: ProjectProps) {
+
+
   const projects: Project[] = projectsData
   const [hoveredProjectId, setHoveredProjectId] = useState<string | null>(null)
   const [showAll, setShowAll] = useState<boolean>(false)
-  
+
   const PROJECT_LIMIT = 5
   const displayedProjects = showAll ? projects : projects.slice(0, PROJECT_LIMIT)
   const hasMoreProjects = projects.length > PROJECT_LIMIT
+
+  useEffect(() => {
+    addSectionId(SECTION_ID)
+  }, [])
 
   const handleProjectHover = (projectId: string) => {
     setHoveredProjectId(projectId)
@@ -31,13 +42,13 @@ function ProjectsPage() {
   }
 
   return (
-    <section id="projects" className="space-y-2">
-        <div className="py-4">
-            <p className="text-2xl text-white font-bold">Project</p>
-        </div>
+    <section id={SECTION_ID} className="space-y-2 scroll-m-14">
+      <div className="pb-4">
+        <p className="text-2xl text-white font-bold">Project</p>
+      </div>
       {displayedProjects.map((project) => (
-        <ProjectCard 
-          key={project.id} 
+        <ProjectCard
+          key={project.id}
           project={project}
           isHovered={hoveredProjectId === project.id}
           onHover={() => handleProjectHover(project.id)}
@@ -45,7 +56,7 @@ function ProjectsPage() {
           isDimmed={hoveredProjectId !== null && hoveredProjectId !== project.id}
         />
       ))}
-      
+
       {hasMoreProjects && (
         <div className="flex justify-center pt-8">
           {!showAll ? (

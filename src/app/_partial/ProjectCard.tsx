@@ -25,15 +25,15 @@ export function ProjectCard({ project, onHover, onLeave, isDimmed }: ProjectCard
                 className={`
                     group rounded-lg transition-all duration-500 ease-in-out 
                     hover:bg-white/5 hover:shadow-md hover:backdrop-blur-md 
-                    cursor-pointer 
-                    ${isDimmed ? 'opacity-10 scale-100' : 'opacity-100 blur-none scale-100'}
-                    ${!isDimmed ? 'sm:hover:-translate-x-4' : ''}
+                    cursor-pointer
+                    ${isDimmed ? 'opacity-10 ' : 'opacity-100 blur-none'}
+                    ${!isDimmed ? 'lg:hover:-translate-x-4' : ''}
                     sm:block
                 `}
                 onMouseEnter={onHover}
                 onMouseLeave={onLeave}
             >
-                <div className="p-4">
+                <div className="p-4 mb-4">
                     <div className="flex flex-col lg:flex-row lg:items-start space-y-4 lg:space-y-0 lg:space-x-6">
                         <div className="w-50 flex items-start justify-start">
                             <Image
@@ -45,14 +45,17 @@ export function ProjectCard({ project, onHover, onLeave, isDimmed }: ProjectCard
                             />
                         </div>
                         <div className="flex-1 space-y-3">
-                            <h3 className="text-white font-medium group-hover:text-amber-400 transition-colors flex items-center">
+                            <h3 className="text-white font-medium group-hover:text-teal-300 transition-colors flex items-center">
                                 {project.title}
-                                <ArrowUpRight className="ml-2 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                {project.link && (
+
+                                    <ArrowUpRight className="ml-2 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                )}
                             </h3>
                             <p className="text-slate-400 text-sm leading-relaxed">{project.description}</p>
                             <div className="flex flex-wrap gap-2">
                                 {project.technologies.map((tech, index) => (
-                                    <span key={index} className="px-3 py-1 text-xs font-medium bg-white/10 text-amber-400 rounded-full">
+                                    <span key={index} className="px-3 py-1 text-xs font-medium bg-white/10 text-teal-300 rounded-full">
                                         {tech}
                                     </span>
                                 ))}

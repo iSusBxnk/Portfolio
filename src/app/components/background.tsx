@@ -46,7 +46,7 @@ export function AnimatedBackground({ children, className = "" }: AnimatedBackgro
         style={{
           background: `
             radial-gradient(
-              2000px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+              1000px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
               rgba(30, 64, 175, 0.1),
               transparent 60%
             ),
@@ -57,7 +57,7 @@ export function AnimatedBackground({ children, className = "" }: AnimatedBackgro
             ),
             radial-gradient(
               800px circle at 25% 30%,
-              rgba(255, 0, 128, 0.06),
+              rgba(6, 182, 212, 0.30),
               transparent 70%
             ),
             radial-gradient(

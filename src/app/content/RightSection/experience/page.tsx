@@ -1,9 +1,23 @@
+"use client"
 import { ArrowUpRight } from 'lucide-react'
-import React from 'react'
+import React, { useEffect } from 'react'
 
-function page() {
-  return (
-            <section id="experience" className="space-y-8">
+interface ExperienceProps {
+    addSectionId: (sectionId: string) => void;
+}
+const SECTION_ID = 'experience'
+
+function Experience({ addSectionId }: ExperienceProps) {
+    useEffect(() => {
+        addSectionId(SECTION_ID)
+    }, [])
+
+    return (
+        <section id={SECTION_ID} className="space-y-8 lg:space-y-12 scroll-m-14">
+            <div className="pb-4">
+                <p className="text-xl text-white font-bold">Experience</p>
+            </div>
+            <div className="space-y-4">
                 <div className="group bg-slate-800/50 border border-slate-700 rounded-lg hover:bg-slate-800/80 hover:border transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10 cursor-pointer">
                     <div className="p-6">
                         <div className="flex flex-col lg:flex-row lg:items-start space-y-4 lg:space-y-0 lg:space-x-6">
@@ -102,8 +116,9 @@ function page() {
                         </div>
                     </div>
                 </div>
-            </section>
-  )
+            </div>
+        </section>
+    )
 }
 
-export default page
+export default Experience
