@@ -8,7 +8,7 @@ const icons: { [key: string]: React.ElementType } = {
 
 export default function Contact() {
   return (
-    <div className="flex items-end gap-4 text-2xl mb-24">
+    <div className="flex items-end gap-4 text-2xl lg:mb-24">
       {socialLinks.map((social) => {
         const Icon = icons[social.id];
         if (!Icon) return null;

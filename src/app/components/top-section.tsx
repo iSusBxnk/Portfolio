@@ -130,7 +130,7 @@ export default function TopSection() {
         }}
       >
         <h1
-          className="text-6xl md:text-8xl font-bold text-white mb-4 tracking-wider"
+          className="text-5xl lg:text-6xl md:text-8xl font-bold text-white mb-4 tracking-wider"
           style={{
             textShadow: "3px 3px 6px rgba(0,0,0,0.8), 0 0 20px rgba(255,255,255,0.3)",
             fontFamily: "serif",
