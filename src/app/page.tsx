@@ -64,9 +64,9 @@ export default function Home() {
 
   return (
     <>
-    <div className="min-h-screen">
+    {/* <div className="min-h-screen"> */}
       {/* Top Parallax Section - Independent background */}
-      <TopSection />
+      {/* <TopSection /> */}
 
       {/* Main Content Section - With AnimatedBackground effect */}
       <AnimatedBackground>
@@ -75,7 +75,7 @@ export default function Home() {
           <RightSection addSectionId={addSectionId} />
         </div>
       </AnimatedBackground>
-    </div>
+    {/* </div> */}
     </>
   )
 }
