@@ -2,7 +2,6 @@ import { ChevronDown } from "lucide-react"
 import Link from "next/link"
 import data from "@/app/data/header.json"
 
-const Resume = '/public/Resume.pdf'
 
 interface HeaderData {
     name: string;
@@ -32,7 +31,7 @@ export default function Header() {
             </p>
             <div className="">
                 <Link
-                    href={Resume}
+                    href={"/Resume.pdf"}
                     target="_blank"
                     className="flex items-center text-white bg-teal-500 hover:bg-teal-600 rounded-md px-4 py-2 w-fit"
                 >

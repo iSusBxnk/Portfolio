@@ -69,7 +69,7 @@ export default function Home() {
     <>
       <MobileMenu menuItems={menuItems.map((item) => item.label)} currentSection={currentSection} />
       <AnimatedBackground>
-        <div className="mx-auto max-w-6xl grid lg:grid-cols-[50%_50%] lg:gap-4 px-4 pt-24">
+        <div className="mx-auto max-w-7xl grid lg:grid-cols-[50%_50%] lg:gap-4 px-4 pt-24">
           <LeftSection menuItems={menuItems.map((item) => item.label)} currentSection={currentSection} />
           <RightSection addSectionId={addSectionId} />
         </div>
