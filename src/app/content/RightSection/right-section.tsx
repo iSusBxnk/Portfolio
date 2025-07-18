@@ -1,7 +1,7 @@
 import React from 'react'
-import Project from "./project/page"
-import About from "./about/page"
-import Experience from "./experience/page"
+import Project from "./project"
+import About from "./about"
+import Experience from "./experience"
 
 interface RightSectionProps {
   addSectionId: (sectionId: string) => void;
