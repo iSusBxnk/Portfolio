@@ -8,14 +8,14 @@ interface AboutProps {
 
 
 const SECTION_ID = 'about'
-function About ({ addSectionId }: AboutProps) {
-    
+function About({ addSectionId }: AboutProps) {
+
     useEffect(() => {
         addSectionId(SECTION_ID)
-    }, [])
+    }, [addSectionId])
 
     return (
-        <section id={SECTION_ID} className="scroll-m-24">
+        <section id={SECTION_ID} className="scroll-mt-8 lg:scroll-m-24">
             <div className="pb-4">
                 <p className="text-xl text-white font-bold">About me</p>
             </div>
@@ -23,7 +23,7 @@ function About ({ addSectionId }: AboutProps) {
                 <p>
                     I am a <span className='text-white hover:text-teal-300 cursor-pointer '>Frontend Web Developer</span> who is passionate about creating great experiences that are well-balanced and appropriately designed in every dimension,
                     paying attention to every pixel detail to deliver user interfaces that are accessible and easy to use,
-                    while committed to building high-performance websites that follow best development practices to create sustainable solutions that truly serve users' needs.
+                    while committed to building high-performance websites that follow best development practices to create sustainable solutions that truly serve users&#39; needs.
                 </p>
                 <p>
                     Currently, I work as a Junior Front-End Developer at <span className='text-white hover:text-teal-300 font-semibold cursor-pointer duration-0'><Link href="https://spacetrax.co/" target="_blank">SPACETRAX CO., LTD.</Link></span> {""}

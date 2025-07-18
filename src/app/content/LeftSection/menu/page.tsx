@@ -1,17 +1,11 @@
 "use client"
-import { ChevronDown } from "lucide-react"
-import Link from "next/link"
 import { useState, useEffect } from "react"
 
 interface MenuItemProps {
   menuItems: { id: string; label: string }[];
   currentSection: string;
 }
-const menuList = [
-  { id: "about", label: "About" },
-  { id: "experience", label: "Experience" },
-  { id: "projects", label: "Projects" }
-]
+
 
 export default function Menu({menuItems, currentSection}: MenuItemProps) {
   const [bounceClass, setBounceClass] = useState("")
