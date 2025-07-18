@@ -15,18 +15,12 @@ export function AnimatedBackground({ children, className = "" }: AnimatedBackgro
     const handleMouseMove = (e: MouseEvent) => {
       if (!backgroundRef.current) return
 
-      // Get the bounding rect of the background container
-      const rect = backgroundRef.current.getBoundingClientRect()
+      const viewportWidth = window.innerWidth
+      const viewportHeight = window.innerHeight
 
-      // Calculate mouse position relative to the container
-      const x = e.clientX - rect.left
-      const y = e.clientY - rect.top
+      const xPercent = (e.clientX / viewportWidth) * 100
+      const yPercent = (e.clientY / viewportHeight) * 100
 
-      // Convert to percentage within the container
-      const xPercent = (x / rect.width) * 100
-      const yPercent = (y / rect.height) * 100
-
-      // Clamp values between 0 and 100
       const clampedX = Math.max(0, Math.min(100, xPercent))
       const clampedY = Math.max(0, Math.min(100, yPercent))
 
@@ -34,22 +28,21 @@ export function AnimatedBackground({ children, className = "" }: AnimatedBackgro
       backgroundRef.current.style.setProperty("--mouse-y", `${clampedY}%`)
     }
 
-    // Add event listener to the specific container instead of document
-    const container = backgroundRef.current
-    if (container) {
-      container.addEventListener("mousemove", handleMouseMove)
-      return () => container.removeEventListener("mousemove", handleMouseMove)
-    }
+    document.addEventListener("mousemove", handleMouseMove)
+    return () => document.removeEventListener("mousemove", handleMouseMove)
   }, [])
 
   return (
-    <div ref={backgroundRef} className={`relative min-h-screen w-full overflow-hidden ${className}`}>
-      {/* Base background layer */}
-      <div className="absolute inset-0 bg-slate-900 pointer-events-none z-0" />
+    <div
+      ref={backgroundRef}
+      className={`min-h-screen w-full relative  ${className}`}
+    >
+      {/* พื้นหลัง layer 1 */}
+      <div className="fixed inset-0 bg-slate-900 pointer-events-none z-0" />
 
-      {/* Animated background on mouse move - scoped to this container */}
+      {/* พื้นหลัง on mouse */}
       <div
-        className="absolute inset-0 pointer-events-none z-[1] transition-opacity duration-700"
+        className="fixed inset-0 pointer-events-none z-[1] transition-opacity duration-700"
         style={{
           background: `
             radial-gradient(
@@ -64,7 +57,7 @@ export function AnimatedBackground({ children, className = "" }: AnimatedBackgro
             ),
             radial-gradient(
               800px circle at 25% 30%,
-              rgba(6, 182, 212, 0.20),
+              rgba(6, 182, 212, 0.30),
               transparent 70%
             ),
             radial-gradient(
@@ -75,8 +68,8 @@ export function AnimatedBackground({ children, className = "" }: AnimatedBackgro
           `,
         }}
       />
+      
 
-      {/* Content with higher z-index */}
       <div className="relative z-10">{children}</div>
     </div>
   )
