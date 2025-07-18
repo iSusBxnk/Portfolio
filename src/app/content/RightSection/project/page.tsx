@@ -23,7 +23,7 @@ function ProjectsPage({ addSectionId }: ProjectProps) {
 
   useEffect(() => {
     addSectionId(SECTION_ID)
-  }, [addSectionId])
+  }, [])
 
   const handleProjectHover = (projectId: string) => {
     setHoveredProjectId(projectId)

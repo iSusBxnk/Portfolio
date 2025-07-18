@@ -10,7 +10,7 @@ const SECTION_ID = 'experience'
 function Experience({ addSectionId }: ExperienceProps) {
     useEffect(() => {
         addSectionId(SECTION_ID)
-    }, [addSectionId])
+    }, [])
 
     return (
         <section id={SECTION_ID} className="scroll-mt-8 lg:scroll-m-24">

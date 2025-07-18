@@ -47,20 +47,20 @@ export default function Home() {
         setCurrentSection(element)
       }
     }
-  }, [sectionIds])
+  }, [])
 
   useEffect(() => {
     if (sectionIds?.length > 0) {
       setCurrentSection(sectionIds[0])
     }
-  }, [sectionIds])
+  }, [])
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
-  }, [handleScroll])
+  }, [])
 
   return (
     <>
