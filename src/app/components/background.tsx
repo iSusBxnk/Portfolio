@@ -100,7 +100,7 @@ export function AnimatedBackground({ children, className = "" }: AnimatedBackgro
 
       {/* พื้นหลัง on mouse */}
       <div
-        className="fixed inset-0 pointer-events-none z-[1] transition-opacity duration-700"
+        className="fixed inset-0 pointer-events-none z-[1] transition-opacity duration-700 hidden md:block"
         style={{
           background: `
             radial-gradient(
@@ -120,6 +120,35 @@ export function AnimatedBackground({ children, className = "" }: AnimatedBackgro
             ),
             radial-gradient(
               900px circle at 70% 80%,
+              rgba(0, 255, 128, 0.05),
+              transparent 80%
+            )
+          `,
+        }}
+      />
+
+      {/* Mobile responsive background overlay */}
+      <div
+        className="fixed inset-0 pointer-events-none z-[1] transition-opacity duration-700 md:hidden"
+        style={{
+          background: `
+            radial-gradient(
+              6000px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+              rgba(0, 0, 0, 0.1),
+              transparent 60%
+            ),
+            radial-gradient(
+              400px circle at calc(var(--mouse-x, 50%) + 80px) calc(var(--mouse-y, 50%) + 100px),
+              rgba(59, 130, 246, 0.1),
+              transparent 60%
+            ),
+            radial-gradient(
+              400px circle at 25% 30%,
+              rgba(6, 182, 212, 0.30),
+              transparent 70%
+            ),
+            radial-gradient(
+              400px circle at 70% 80%,
               rgba(0, 255, 128, 0.05),
               transparent 80%
             )
