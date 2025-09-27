@@ -1,8 +1,8 @@
 import Menu from "./menu"
 import Header from "./header"
-import Contact from "./contact"
+// import Contact from "./contact"
 import Profile from "./contactCard"
-import { Download , Mail, Phone, User, Instagram, Facebook } from "lucide-react"
+import { Download , Mail, User, Instagram } from "lucide-react"
 interface LeftSectionProps {
   menuItems: string[]
   currentSection: string

@@ -10,8 +10,8 @@ type FrameworkAgnosticProps = {
 };
 
 const FrameworkAgnostic = ({
-  cardTitle = "Framework Agnostic",
-  cardDescription = "Seamlessly integrate with any tech stack, whether it's Next.js,React, HTML, or anything else. Statsio works everywhere.",
+  // cardTitle = "Framework Agnostic",
+  // cardDescription = "Seamlessly integrate with any tech stack, whether it's Next.js,React, HTML, or anything else. Statsio works everywhere.",
 }: FrameworkAgnosticProps) => {
   return (
     <div

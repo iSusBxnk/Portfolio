@@ -13,7 +13,7 @@ function About({ addSectionId }: AboutProps) {
 
     useEffect(() => {
         addSectionId(SECTION_ID)
-    }, [])
+    }, [addSectionId])
 
     return (
         <section id={SECTION_ID} className="scroll-mt-8 lg:scroll-m-24">
@@ -28,7 +28,9 @@ function About({ addSectionId }: AboutProps) {
                     while committed to building high-performance websites that follow best development practices to create sustainable solutions that truly serve users&#39; needs.
                 </p>
                 <p>
-                    Currently, I work as a Junior Front-End Developer at <span className='text-white hover:text-teal-300 font-semibold cursor-pointer duration-0'><Link href="https://spacetrax.co/" target="_blank">SPACETRAX CO., LTD.</Link></span> {""}
+                    Currently, I work as a Junior Front-End Developer at <span className='text-white hover:text-teal-300 font-semibold cursor-pointer duration-0'>
+                        <Link href="https://spacetrax.co/" target="_blank">SPACETRAX CO., LTD.</Link>
+                        </span> {""}
                     My primary responsibilities include developing and maintaining UI components to align with specified designs, as well as writing code according to systematically designed workflows. I prioritize web accessibility standards and best practices to ensure users receive the most comprehensive and
                     efficient experience from every project we develop.
                 </p>

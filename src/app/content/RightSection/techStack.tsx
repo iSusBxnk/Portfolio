@@ -1,5 +1,5 @@
 "use client"
-import Link from 'next/link'
+// import Link from 'next/link'
 import React, { useEffect } from 'react'
 import Teach from '@/app/components/teach'
 
@@ -13,7 +13,7 @@ function About({ addSectionId }: AboutProps) {
 
     useEffect(() => {
         addSectionId(SECTION_ID)
-    }, [])
+    }, [addSectionId])
 
     return (
         <section id={SECTION_ID} className="scroll-mt-8 lg:scroll-m-24">

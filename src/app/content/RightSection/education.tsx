@@ -1,5 +1,4 @@
 "use client"
-import Link from 'next/link'
 import React, { useEffect } from 'react'
 import TextShimmer from '@/app/components/typography/text-shrim'
 
@@ -13,7 +12,7 @@ function About({ addSectionId }: AboutProps) {
 
     useEffect(() => {
         addSectionId(SECTION_ID)
-    }, [])
+    }, [ addSectionId ])
 
     return (
         <section id={SECTION_ID} className="scroll-mt-8 lg:scroll-m-24">
@@ -46,7 +45,7 @@ function About({ addSectionId }: AboutProps) {
                                     <span className="text-slate-500 uppercase font-semibold text-xs">2022 - 2025</span>
                                 </div>
                                 <div className="flex flex-col gap-1 w-full text-lg">
-                                    <span className="text-white font-semibold text-lg mb-2">Bachelor's Degree</span>
+                                    <span className="text-white font-semibold text-lg mb-2">Bachelor&apos;s Degree</span>
                                     <span className="text-white font-semibold">University  {` `}<span className="text-slate-500  font-normal">Rajamangala University of Technology Lanna</span></span>
                                     <span className="text-white font-semibold">Major {` `}<span className="text-slate-500  font-normal">InformationTechnology</span></span>
                                     <span className="text-lg mt-6 text-white font-semibold">GPA {` `} <TextShimmer>3.75</TextShimmer></span>

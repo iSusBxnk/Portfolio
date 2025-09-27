@@ -2,7 +2,7 @@ import React from 'react'
 import Project from "./project"
 import About from "./about"
 import Experience from "./experience"
-import TechStack from "./techStack"
+// import TechStack from "./techStack"
 import Education from "./education"
 
 interface RightSectionProps {
