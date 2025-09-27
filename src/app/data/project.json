@@ -4,7 +4,7 @@
     "title": "SME Connext Dashboard v.2",
     "description": "The Office of Small and Medium Enterprises Promotion (OSMEP) develops web applications and digital platforms such as SME Single Platform and SME Big Data Dashboard to serve as a comprehensive service center for Thai SME entrepreneurs.",
     "image": "/smeconnext.png",
-    "technologies": ["NextJS","TypeScript", "MUI", "GPT-4","AWS","Docker"],
+    "technologies": ["NextJS","TypeScript", "MUI","AWS","Docker"],
     "link": "https://uat.smeconnext.com/login",
     "year": "2025 - PRESENT"
   },
