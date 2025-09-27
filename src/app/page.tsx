@@ -4,6 +4,7 @@ import LeftSection from "./content/LeftSection/left-section"
 import RightSection from "./content/RightSection/right-section"
 import { useEffect, useState, useCallback } from "react"
 import MobileMenu from "./components/mobile-menu"
+
 export default function Home() {
   const [sectionIds, setSectionIds] = useState<string[]>([])
   const [sectionOneId, setSectionOneId] = useState<string | null>(null)

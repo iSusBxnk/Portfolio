@@ -37,8 +37,8 @@ export function ProjectCard({ project, onHover, onLeave, isDimmed }: ProjectCard
                 <div className="p-4 mb-4">
                     <div className="flex flex-col lg:flex-row lg:items-start space-y-4 lg:space-y-0 lg:space-x-6">
                         <div className="w-50 flex items-start justify-start">
-                            <div className="flex flex-col gap-4">
-                                <p className="text-slate-400 text-sm text-end font-extrabold group-hover:text-teal-300 transition-colors">
+                            <div className="flex flex-col-reverse md:flex-col gap-4">
+                                <p className="text-slate-400 text-sm text-start font-extrabold group-hover:text-teal-300 transition-colors">
                                     {project.year}
                                 </p>
                                 <Image
@@ -46,7 +46,7 @@ export function ProjectCard({ project, onHover, onLeave, isDimmed }: ProjectCard
                                     alt="Project Image"
                                     width={600}
                                     height={400}
-                                    className="w-40 h-auto object-cover rounded-lg border border-slate-700"
+                                    className="w-full md:w-40 h-auto object-cover rounded-lg border border-slate-700"
                                 />
                             </div>
                         </div>

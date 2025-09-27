@@ -29,7 +29,7 @@ export default function Menu({ menuItems, currentSection }: MenuItemProps) {
     }
   }
   return (
-    <div className="hidden lg:flex flex-col gap-3 font-semibold mt-20">
+    <div className="hidden lg:flex flex-col gap-3 font-semibold mt-60">
       {menuItems.map((item, index) => (
         <button
           key={`menu-${index}-${item.id}`}

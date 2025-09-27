@@ -18,7 +18,7 @@ function Experience({ addSectionId }: ExperienceProps) {
                 <p className="text-xl text-white font-bold">Experience</p>
             </div>
             <div className="space-y-4">
-                <div className="group bg-slate-600/10 border border-slate-700 rounded-lg hover:bg-slate-800/80 hover:border transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/10 cursor-pointer">
+                <div className="hover:backdrop-blur-sm rounded-lg bg-gradient-to-b from-black/5 to-neutral-900/20 border-2 border-neutral-100/10  transition-all duration-300 hover:shadow-lg hover:shadow-slate-700/20 cursor-pointer">
                     <div className="p-6">
                         <div className="flex flex-col lg:flex-row lg:items-start space-y-4 lg:space-y-0 lg:space-x-6">
                             <div className="text-xs font-semibold text-slate-500 uppercase tracking-wide lg:w-32 flex-shrink-0">

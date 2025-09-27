@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="h-full bg-slate-900 no-scrollbar">
+    <html lang="en" className="h-full bg-black no-scrollbar">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased  h-full`}>
         <ThemeProvider>{children}</ThemeProvider>
       </body>

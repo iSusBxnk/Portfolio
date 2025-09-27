@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import React, { useEffect } from 'react'
 
+
 interface AboutProps {
     addSectionId: (sectionId: string) => void;
 }
@@ -16,8 +17,9 @@ function About({ addSectionId }: AboutProps) {
 
     return (
         <section id={SECTION_ID} className="scroll-mt-8 lg:scroll-m-24">
-            <div className="pb-4">
-                <p className="text-xl text-white font-bold">About me</p>
+            <div className="pb-4 text-xl text-white font-bold">
+                <p className="text-xl text-white font-pbold">About me</p>
+                {/* <TextShimmer>About me</TextShimmer> */}
             </div>
             <div className="space-y-4 text-slate-400 leading-relaxed">
                 <p>
@@ -30,8 +32,8 @@ function About({ addSectionId }: AboutProps) {
                     My primary responsibilities include developing and maintaining UI components to align with specified designs, as well as writing code according to systematically designed workflows. I prioritize web accessibility standards and best practices to ensure users receive the most comprehensive and
                     efficient experience from every project we develop.
                 </p>
-
             </div>
+
         </section>
     )
 }
