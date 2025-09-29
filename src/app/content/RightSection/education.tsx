@@ -40,15 +40,15 @@ function About({ addSectionId }: AboutProps) {
                     </div>
                     <div className="min-h-[200px] bg-gradient-to-b from-black/5 to-neutral-900/10">
                         <div className="grid p-4 gap-2">
-                            <div className="flex flex-row gap-[32px]">
+                            <div className="flex md:flex-row flex-col gap-[32px]">
                                 <div className="text-white font-semibold w-[100px]">
                                     <span className="text-slate-500 uppercase font-semibold text-xs">2022 - 2025</span>
                                 </div>
                                 <div className="flex flex-col gap-1 w-full text-lg">
                                     <span className="text-white font-semibold text-lg mb-2">Bachelor&apos;s Degree</span>
-                                    <span className="text-white font-semibold">University  {` `}<span className="text-slate-500  font-normal">Rajamangala University of Technology Lanna</span></span>
+                                    <span className="text-white font-semibold"><span className='md:block hidden'>University{` `}</span><span className="text-slate-500  font-normal text-ellipsis line-clamp-2">Rajamangala University of Technology Lanna</span></span>
                                     <span className="text-white font-semibold">Major {` `}<span className="text-slate-500  font-normal">InformationTechnology</span></span>
-                                    <span className="text-lg mt-6 text-white font-semibold">GPA {` `} <TextShimmer>3.75</TextShimmer></span>
+                                    <span className="text-lg mt-6 text-white font-semibold">GPA {` `} <span className="text-slate-500  font-normal">3.75</span></span>
                                 </div>
                             </div>
 
