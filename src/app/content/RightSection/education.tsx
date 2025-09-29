@@ -1,6 +1,5 @@
 "use client"
 import React, { useEffect } from 'react'
-import TextShimmer from '@/app/components/typography/text-shrim'
 
 interface AboutProps {
     addSectionId: (sectionId: string) => void;
