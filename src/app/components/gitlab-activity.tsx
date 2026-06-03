@@ -142,7 +142,7 @@ export default function GitlabActivity({ addSectionId }: GitlabActivityProps) {
   return (
     <section id={SECTION_ID} className="scroll-mt-8 lg:scroll-m-24">
       <div className="pb-4">
-        <p className="text-xl text-white font-bold">{t("activity.title")}</p>
+        <h2 className="text-xl text-white font-bold">{t("activity.title")}</h2>
         <p className="text-slate-400 text-sm">{t("activity.subtitle", { count: total })}</p>
       </div>
 

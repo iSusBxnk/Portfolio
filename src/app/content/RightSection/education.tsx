@@ -17,7 +17,7 @@ function Education({ addSectionId }: EducationProps) {
   return (
     <section id={SECTION_ID} className="scroll-mt-8 lg:scroll-m-24">
       <div className="pb-4 text-xl text-white font-bold">
-        <p className="text-xl text-white font-pbold">{t("education.title")}</p>
+        <h2 className="text-xl text-white font-pbold">{t("education.title")}</h2>
       </div>
       <div className="space-y-4 text-slate-400 leading-relaxed">
         <pre className="overflow-hidden rounded-xl border-2 border-neutral-100/10 text-[13px] shadow-lg hover:shadow-slate-700/20 hover:shadow-lg">
@@ -27,6 +27,7 @@ function Education({ addSectionId }: EducationProps) {
               fill="currentColor"
               strokeWidth="0"
               viewBox="0 0 24 24"
+              aria-hidden="true"
               className="mr-1 size-4 text-white/40"
               height="1em"
               width="1em"

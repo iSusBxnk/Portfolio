@@ -60,7 +60,12 @@ export default function ProjectsPage() {
                   >
                     <td className="py-6 px-0 text-xs text-slate-400 align-top">{pickLocale(project.year, locale)}</td>
                     <td className="py-6 px-4 align-top">
-                      <div className="text-sm font-medium text-teal-400 truncate pr-2">{pickLocale(project.title, locale)}</div>
+                      <Link
+                        href={localizedPath(locale, `/projects/${project.slug}`)}
+                        className="text-sm font-medium text-teal-400 hover:text-teal-300 hover:underline truncate pr-2 block"
+                      >
+                        {pickLocale(project.title, locale)}
+                      </Link>
                     </td>
                     <td className="py-6 px-4 text-sm text-slate-400 align-top">
                       <div className="line-clamp-3 pr-2">{pickLocale(project.description, locale)}</div>

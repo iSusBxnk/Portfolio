@@ -1,11 +1,13 @@
 import { ArrowUpRight } from "lucide-react"
 import Image from "next/image"
-import Link from "next/link"
+import { Link } from "next-view-transitions"
+import { localizedPath } from "@/app/lib/locale-path"
 
 export type Localized = { en: string; th: string }
 
 export interface Project {
     id: string
+    slug: string
     title: Localized
     description: Localized
     image: string
@@ -31,7 +33,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, locale, onHover, onLeave, isDimmed }: ProjectCardProps) {
     return (
-        <Link href={project.link || "#"} target="_blank">
+        <Link href={localizedPath(locale, `/projects/${project.slug}`)}>
             <div
                 className={`
                     group rounded-lg transition-all duration-500 ease-in-out 
@@ -53,9 +55,10 @@ export function ProjectCard({ project, locale, onHover, onLeave, isDimmed }: Pro
                                 </p>
                                 <Image
                                     src={project.image || "https://placehold.co/600x400"}
-                                    alt="Project Image"
+                                    alt={pickLocale(project.title, locale)}
                                     width={600}
                                     height={400}
+                                    style={{ viewTransitionName: `project-${project.slug}` }}
                                     className="w-full md:w-40 h-auto object-cover rounded-lg border border-slate-700"
                                 />
                             </div>

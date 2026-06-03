@@ -9,15 +9,16 @@ export default function Header() {
 
   return (
     <div className="flex flex-col gap-2">
-      <Link
-        href="#about"
-        className="text-4xl lg:text-5xl font-bold text-white tracking-tight"
-        style={{
-          textShadow: "3px 3px 6px rgba(0,0,0,0.2), 0 0 20px rgba(255,255,255,0.2)",
-        }}
-      >
-        <TextReveal text={t("header.name")} />
-      </Link>
+      <h1 className="text-4xl lg:text-5xl font-bold text-white tracking-tight">
+        <Link
+          href="#about"
+          style={{
+            textShadow: "3px 3px 6px rgba(0,0,0,0.2), 0 0 20px rgba(255,255,255,0.2)",
+          }}
+        >
+          <TextReveal text={t("header.name")} />
+        </Link>
+      </h1>
       <div className="text-xl lg:text-2xl font-medium  text-slate-200">
         <TextReveal text={t("header.position")} />
       </div>

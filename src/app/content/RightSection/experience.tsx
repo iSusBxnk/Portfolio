@@ -18,7 +18,7 @@ function Experience({ addSectionId }: ExperienceProps) {
   return (
     <section id={SECTION_ID} className="scroll-mt-8 lg:scroll-m-24">
       <div className="pb-4">
-        <p className="text-xl text-white font-bold">{t("experience.title")}</p>
+        <h2 className="text-xl text-white font-bold">{t("experience.title")}</h2>
       </div>
       <div className="space-y-4">
         <div className="hover:backdrop-blur-sm rounded-lg bg-gradient-to-b from-black/5 to-neutral-900/20 border-2 border-neutral-100/10  transition-all duration-300 hover:shadow-lg hover:shadow-slate-700/20 cursor-pointer">

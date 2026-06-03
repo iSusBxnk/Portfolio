@@ -47,7 +47,7 @@ function ProjectsPage({ addSectionId }: ProjectProps) {
   return (
     <section id={SECTION_ID} className="space-y-2 scroll-mt-8 lg:scroll-m-24">
       <div className="pb-4">
-        <p className="text-2xl text-white font-bold">{t("projects.title")}</p>
+        <h2 className="text-2xl text-white font-bold">{t("projects.title")}</h2>
       </div>
 
       {displayedProjects.map((project) => (

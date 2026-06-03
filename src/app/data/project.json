@@ -1,6 +1,7 @@
 [
   {
     "id": "SME Connext Dashboard v.2",
+    "slug": "sme-connext",
     "title": {
       "en": "SME Connext Dashboard v.2",
       "th": "SME Connext Dashboard v.2"
@@ -10,7 +11,12 @@
       "th": "สำนักงานส่งเสริมวิสาหกิจขนาดกลางและขนาดย่อม (สสว.) พัฒนาเว็บแอปพลิเคชันและแพลตฟอร์มดิจิทัล เช่น SME Single Platform และ SME Big Data Dashboard เพื่อเป็นศูนย์บริการครบวงจรสำหรับผู้ประกอบการ SME ไทย"
     },
     "image": "/images/smeconnext.webp",
-    "technologies": ["NextJS", "TypeScript", "MUI", "ApexChart"],
+    "technologies": [
+      "TypeScript",
+      "NextJS",
+      "MUI",
+      "ApexChart"
+    ],
     "link": "https://uat.smeconnext.com/login",
     "year": {
       "en": "2025 - PRESENT",
@@ -19,6 +25,7 @@
   },
   {
     "id": "SME Profile Dashboard v.2",
+    "slug": "sme-profile",
     "title": {
       "en": "SME Profile Dashboard v.2",
       "th": "SME Profile Dashboard v.2"
@@ -28,7 +35,12 @@
       "th": "เว็บไซต์ฐานข้อมูลกลางที่รวบรวมข้อมูลจากผู้ประกอบการ SME และหน่วยงานภาครัฐ เพื่อบูรณาการและนำข้อมูลไปใช้วิเคราะห์แนวโน้มความต้องการของผู้ประกอบการ พร้อมนำเสนอบริการและการสนับสนุนจากภาครัฐได้อย่างมีประสิทธิภาพ"
     },
     "image": "/images/smeprofile.webp",
-    "technologies": ["NextJS", "TypeScript", "TailwindCSS", "ApexChart"],
+    "technologies": [
+      "TypeScript",
+      "NextJS",
+      "TailwindCSS",
+      "ApexChart"
+    ],
     "link": "https://smeprofile.org/login",
     "year": {
       "en": "2025 - PRESENT",
@@ -37,6 +49,7 @@
   },
   {
     "id": "Lanna-Koyori Project",
+    "slug": "lanna-koyori",
     "title": {
       "en": "Lanna-Koyori Project",
       "th": "Lanna-Koyori Project"
@@ -46,7 +59,12 @@
       "th": "เว็บไซต์โครงการ Koyori ความร่วมมือระหว่างนักออกแบบชาวไทยและญี่ปุ่นกับช่างฝีมือในภาคเหนือของประเทศไทย ดำเนินงานภายใต้สมาคมวัฒนธรรมและหัตถกรรมล้านนา (LCCA) และมหาวิทยาลัยเทคโนโลยีราชมงคลล้านนา"
     },
     "image": "/images/koyori.webp",
-    "technologies": ["NextJS", "TypeScript", "TailwindCSS", "Supabase"],
+    "technologies": [
+      "TypeScript",
+      "NextJS",
+      "TailwindCSS",
+      "Supabase"
+    ],
     "link": "https://www.lannakoyori.org/",
     "year": {
       "en": "NOV 2024 – MAY 2025",

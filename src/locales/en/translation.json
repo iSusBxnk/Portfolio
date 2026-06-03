@@ -1,4 +1,13 @@
 {
+  "meta": {
+    "title": "Chayakorn Phukhiao — Frontend Developer",
+    "description": "Portfolio of Chayakorn Phukhiao, a Frontend Developer focused on accessible, high-performance web experiences built with Next.js, React and TypeScript."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "home": "Back to home"
+  },
   "nav": {
     "about": "About",
     "education": "Education",
@@ -60,6 +69,9 @@
     "viewArchive": "View Full Project Archive",
     "allTitle": "All Projects",
     "back": "Back to home",
+    "backToProjects": "Back to projects",
+    "visitSite": "Visit live site",
+    "techStack": "Tech stack",
     "table": {
       "year": "Year",
       "project": "Project",

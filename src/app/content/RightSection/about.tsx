@@ -18,7 +18,7 @@ function About({ addSectionId }: AboutProps) {
   return (
     <section id={SECTION_ID} className="scroll-mt-8 lg:scroll-m-24">
       <div className="pb-4 text-xl text-white font-bold">
-        <p className="text-xl text-white font-pbold">{t("about.title")}</p>
+        <h2 className="text-xl text-white font-pbold">{t("about.title")}</h2>
       </div>
       <div className="space-y-4 text-slate-400 leading-relaxed">
         <p>

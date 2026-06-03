@@ -4,6 +4,8 @@ import { dir } from "i18next"
 import { Geist, Geist_Mono, Kanit } from "next/font/google"
 import "../globals.css"
 import { ViewTransitions } from "next-view-transitions"
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { ThemeProvider } from "@/app/providers/theme-provider"
 import TranslationsProvider from "@/app/providers/translations-provider"
 import LanguageSwitcher from "@/app/components/language-switcher"
@@ -31,48 +33,76 @@ const SITE_URL = "https://chayakorn-portfolio.vercel.app"
 
 const i18nNamespaces = ["translation"]
 
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
-  title: {
-    default: "Chayakorn Phukhiao — Frontend Developer",
-    template: "%s · Chayakorn Phukhiao",
-  },
-  description:
-    "Portfolio of Chayakorn Phukhiao, a Frontend Developer focused on accessible, high-performance web experiences built with Next.js, React and TypeScript.",
-  keywords: [
-    "Chayakorn Phukhiao",
-    "Frontend Developer",
-    "Web Developer",
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Portfolio",
-  ],
-  authors: [{ name: "Chayakorn Phukhiao" }],
-  creator: "Chayakorn Phukhiao",
-  alternates: { canonical: "/" },
-  openGraph: {
-    type: "website",
-    url: SITE_URL,
-    siteName: "Chayakorn Phukhiao",
-    title: "Chayakorn Phukhiao — Frontend Developer",
-    description:
-      "Frontend Developer focused on accessible, high-performance web experiences built with Next.js, React and TypeScript.",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Chayakorn Phukhiao — Frontend Developer",
-    description:
-      "Frontend Developer focused on accessible, high-performance web experiences built with Next.js, React and TypeScript.",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const { t } = await initTranslations(locale, i18nNamespaces)
+  const title = t("meta.title")
+  const description = t("meta.description")
+
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: {
+      default: title,
+      template: "%s · Chayakorn Phukhiao",
+    },
+    description,
+    keywords: [
+      "Chayakorn Phukhiao",
+      "Frontend Developer",
+      "Web Developer",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Portfolio",
+    ],
+    authors: [{ name: "Chayakorn Phukhiao" }],
+    creator: "Chayakorn Phukhiao",
+    alternates: {
+      canonical: locale === i18nConfig.defaultLocale ? "/" : `/${locale}`,
+      languages: { th: "/", en: "/en" },
+    },
+    openGraph: {
+      type: "website",
+      url: SITE_URL,
+      siteName: "Chayakorn Phukhiao",
+      locale: locale === "th" ? "th_TH" : "en_US",
+      title,
+      description,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+    robots: { index: true, follow: true },
+  }
 }
 
 export function generateStaticParams() {
   return i18nConfig.locales.map((locale) => ({ locale }))
+}
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Chayakorn Phukhiao",
+  jobTitle: "Frontend Developer",
+  url: SITE_URL,
+  worksFor: { "@type": "Organization", name: "SPACETRAX CO., LTD." },
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "Rajamangala University of Technology Lanna",
+  },
+  knowsAbout: ["Next.js", "React", "TypeScript", "TailwindCSS", "Frontend Development"],
+  sameAs: [
+    "https://www.linkedin.com/in/chayakorn-phukhiao-913652276/",
+    "https://www.instagram.com/tabxnk_/",
+    "https://gitlab.com/Chayakorn_po65",
+  ],
 }
 
 export default async function RootLayout({
@@ -89,12 +119,18 @@ export default async function RootLayout({
     <ViewTransitions>
       <html lang={locale} dir={dir(locale)} className="h-full bg-black no-scrollbar">
         <body className={`${geistSans.variable} ${geistMono.variable} ${kanit.variable} antialiased  h-full`}>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+          />
           <TranslationsProvider locale={locale} namespaces={i18nNamespaces} resources={resources}>
             <ThemeProvider>
               <LanguageSwitcher className="hidden lg:flex fixed top-6 right-6 z-50" />
               {children}
             </ThemeProvider>
           </TranslationsProvider>
+          <Analytics />
+          <SpeedInsights />
         </body>
       </html>
     </ViewTransitions>
