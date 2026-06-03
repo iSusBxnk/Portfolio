@@ -29,7 +29,7 @@ const kanit = Kanit({
   weight: ["300", "400", "500", "600", "700"],
 })
 
-const SITE_URL = "https://portfolio-delta-two-34ayi36biv.vercel.app"
+const SITE_URL = "https://chayakorn-portfolio.vercel.app"
 
 const i18nNamespaces = ["translation"]
 
