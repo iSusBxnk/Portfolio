@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next"
 
-const SITE_URL = "https://chayakorn.dev"
+const SITE_URL = "https://portfolio-delta-two-34ayi36biv.vercel.app"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = ["", "/projects"]
