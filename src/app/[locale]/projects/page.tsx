@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { useCurrentLocale } from "next-i18n-router/client"
-import { Link } from "next-view-transitions"
+import { Link, useTransitionRouter } from "next-view-transitions"
 import { ArrowLeft } from "lucide-react"
 import projectsData from "@/app/data/project.json"
 import { getTechColor } from "@/app/data/tech-colors"
@@ -14,6 +14,7 @@ import i18nConfig from "../../../../i18nConfig"
 
 export default function ProjectsPage() {
   const { t } = useTranslation()
+  const router = useTransitionRouter()
   const locale = useCurrentLocale(i18nConfig) ?? i18nConfig.defaultLocale
   const projects: Project[] = projectsData
   const [hoveredRow, setHoveredRow] = useState<string | null>(null)
@@ -52,7 +53,8 @@ export default function ProjectsPage() {
                 {projects.map((project) => (
                   <tr
                     key={project.id}
-                    className={`border-b border-slate-600 transition-colors duration-200 ${
+                    onClick={() => router.push(localizedPath(locale, `/projects/${project.slug}`))}
+                    className={`cursor-pointer border-b border-slate-600 transition-colors duration-200 ${
                       hoveredRow === project.id ? "bg-slate-800/30" : "hover:bg-slate-800/20"
                     }`}
                     onMouseEnter={() => setHoveredRow(project.id)}
@@ -62,6 +64,7 @@ export default function ProjectsPage() {
                     <td className="py-6 px-4 align-top">
                       <Link
                         href={localizedPath(locale, `/projects/${project.slug}`)}
+                        onClick={(e) => e.stopPropagation()}
                         className="text-sm font-medium text-teal-400 hover:text-teal-300 hover:underline truncate pr-2 block"
                       >
                         {pickLocale(project.title, locale)}
@@ -87,6 +90,7 @@ export default function ProjectsPage() {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
                         className="inline-flex items-center text-slate-400 hover:text-teal-300 transition-colors text-sm truncate"
                       >
                         <span className="truncate max-w-[180px]">
