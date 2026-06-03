@@ -46,7 +46,7 @@ export default function LeftSection({ menuItems, currentSection }: LeftSectionPr
 
   return (
     <div>
-      <div className="sticky top-24 grid lg:grid-rows-[35%_45%_20%] lg:h-[87vh] gap-4 lg:gap-0 mb-16 lg:mb-0">
+      <div className="sticky top-14 grid lg:grid-rows-[35%_45%_20%] lg:h-[87vh] gap-4 lg:gap-0 mb-16 lg:mb-0">
        <div className="space-y-4 ">
        <Header />
        <Entrance delay={0.2} className="md:ml-16 pt-6 md:pt-0 md:block flex justify-center items-center">

@@ -62,7 +62,7 @@ export default function Home() {
     <>
       <MobileMenu menuItems={sectionIds} currentSection={currentSection} />
       <AnimatedBackground>
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-[50%_50%] lg:gap-4 px-4 pt-24">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-[50%_50%] lg:gap-4 px-4 pt-14">
           <LeftSection menuItems={sectionIds} currentSection={currentSection} />
           <RightSection addSectionId={addSectionId} />
         </div>

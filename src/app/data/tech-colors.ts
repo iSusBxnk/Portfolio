@@ -22,6 +22,8 @@ const TECH_COLORS: Record<string, string> = {
   nodejs: "bg-green-500/20 text-green-300 border-green-500/30",
   redux: "bg-purple-600/20 text-purple-300 border-purple-600/30",
   figma: "bg-pink-500/20 text-pink-300 border-pink-500/30",
+  gsap: "bg-green-500/20 text-green-300 border-green-500/30",
+  swiper: "bg-indigo-500/20 text-indigo-300 border-indigo-500/30",
 }
 
 export const DEFAULT_TECH_COLOR = "bg-gray-500/20 text-gray-300 border-gray-500/30"

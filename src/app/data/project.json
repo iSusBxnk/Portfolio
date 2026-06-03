@@ -1,5 +1,30 @@
 [
   {
+    "id": "OSMEP",
+    "slug": "osmep",
+    "title": {
+      "en": "OSMEP",
+      "th": "OSMEP"
+    },
+    "description": {
+      "en": "Landing page for OSMEP (the Office of Small and Medium Enterprises Promotion), the Thai government agency that promotes and supports small and medium enterprises. Part of the SME ONE ID platform — a single digital identity that lets entrepreneurs access OSMEP's services and support through one account — built with scroll-driven GSAP animations and Swiper carousels.",
+      "th": "หน้า Landing page ของ สสว. (สำนักงานส่งเสริมวิสาหกิจขนาดกลางและขนาดย่อม) หน่วยงานภาครัฐที่ส่งเสริมและสนับสนุนผู้ประกอบการ SME ไทย ภายใต้แพลตฟอร์ม SME ONE ID รหัสเดียวที่ให้ผู้ประกอบการเข้าถึงบริการและการสนับสนุนของ สสว. ได้ผ่านบัญชีเดียว พัฒนาด้วยแอนิเมชันแบบ scroll ด้วย GSAP และคารูเซลด้วย Swiper"
+    },
+    "image": "/images/osmep.webp",
+    "technologies": [
+      "TypeScript",
+      "NextJS",
+      "TailwindCSS",
+      "GSAP",
+      "Swiper"
+    ],
+    "link": "https://osmep.smeoneid.com/",
+    "year": {
+      "en": "2025 - PRESENT",
+      "th": "2025 - ปัจจุบัน"
+    }
+  },
+  {
     "id": "SME Connext Dashboard v.2",
     "slug": "sme-connext",
     "title": {
