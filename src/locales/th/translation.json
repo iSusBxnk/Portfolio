@@ -18,6 +18,7 @@
   "activity": {
     "title": "กิจกรรมบน GitLab",
     "subtitle": "{{count}} contributions ในรอบปีที่ผ่านมา",
+    "contributions": "contributions ในรอบปีที่ผ่านมา",
     "less": "น้อย",
     "more": "มาก",
     "loading": "กำลังโหลดกิจกรรม…",

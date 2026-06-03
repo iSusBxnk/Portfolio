@@ -18,6 +18,7 @@
   "activity": {
     "title": "GitLab Activity",
     "subtitle": "{{count}} contributions in the last year",
+    "contributions": "contributions in the last year",
     "less": "Less",
     "more": "More",
     "loading": "Loading activity…",

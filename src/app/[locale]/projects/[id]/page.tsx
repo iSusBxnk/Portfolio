@@ -88,7 +88,7 @@ export default async function ProjectDetailPage({
             {project.technologies.map((tech) => (
               <span
                 key={tech}
-                className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium border ${getTechColor(tech)}`}
+                className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium border transition-transform duration-200 hover:-translate-y-0.5 ${getTechColor(tech)}`}
               >
                 {tech}
               </span>
@@ -101,7 +101,7 @@ export default async function ProjectDetailPage({
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 rounded-md border border-teal-500/40 bg-teal-500/10 px-5 py-2.5 text-sm font-medium text-teal-300 transition-colors hover:bg-teal-500/20"
+            className="group inline-flex items-center gap-2 rounded-md border border-teal-500/40 bg-teal-500/10 px-5 py-2.5 text-sm font-medium text-teal-300 transition-all hover:bg-teal-500/20 hover:scale-[1.02] active:scale-95"
           >
             {t("projects.visitSite")}
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />

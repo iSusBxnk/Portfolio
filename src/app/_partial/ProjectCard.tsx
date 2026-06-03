@@ -73,7 +73,7 @@ export function ProjectCard({ project, locale, onHover, onLeave, isDimmed }: Pro
                             <p className="text-slate-400 text-sm leading-relaxed">{pickLocale(project.description, locale)}</p>
                             <div className="flex flex-wrap gap-2">
                                 {project.technologies.map((tech, index) => (
-                                    <span key={index} className="px-3 py-1 text-xs font-medium bg-white/10 text-teal-300 rounded-full">
+                                    <span key={index} className="px-3 py-1 text-xs font-medium bg-white/10 text-teal-300 rounded-full transition-transform duration-200 hover:-translate-y-0.5">
                                         {tech}
                                     </span>
                                 ))}

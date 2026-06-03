@@ -3,6 +3,7 @@
 import type React from "react"
 import { useEffect, useMemo, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
+import CountUp from "@/app/components/motion/count-up"
 
 type Calendar = Record<string, number>
 
@@ -143,7 +144,9 @@ export default function GitlabActivity({ addSectionId }: GitlabActivityProps) {
     <section id={SECTION_ID} className="scroll-mt-8 lg:scroll-m-24">
       <div className="pb-4">
         <h2 className="text-xl text-white font-bold">{t("activity.title")}</h2>
-        <p className="text-slate-400 text-sm">{t("activity.subtitle", { count: total })}</p>
+        <p className="text-slate-400 text-sm">
+          <CountUp value={total} className="text-teal-300 font-semibold" /> {t("activity.contributions")}
+        </p>
       </div>
 
       <div className="rounded-lg border-2 border-neutral-100/10 bg-gradient-to-b from-black/5 to-neutral-900/20 p-4">

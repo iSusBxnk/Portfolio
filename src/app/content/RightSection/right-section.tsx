@@ -4,6 +4,7 @@ import About from "./about"
 import Experience from "./experience"
 import Education from "./education"
 import GitlabActivity from "@/app/components/gitlab-activity"
+import Reveal from "@/app/components/motion/reveal"
 
 interface RightSectionProps {
   addSectionId: (sectionId: string) => void;
@@ -11,11 +12,11 @@ interface RightSectionProps {
 export default function RightSection({addSectionId}: RightSectionProps) {
     return (
         <div className="space-y-16 lg:space-y-24 mb-24">
-          <About addSectionId={addSectionId}/>
-          <Education addSectionId={addSectionId}/>
-          <Experience addSectionId={addSectionId}/>
-          <GitlabActivity addSectionId={addSectionId}/>
-          <Project addSectionId={addSectionId}/>
+          <Reveal><About addSectionId={addSectionId}/></Reveal>
+          <Reveal><Education addSectionId={addSectionId}/></Reveal>
+          <Reveal><Experience addSectionId={addSectionId}/></Reveal>
+          <Reveal><GitlabActivity addSectionId={addSectionId}/></Reveal>
+          <Reveal><Project addSectionId={addSectionId}/></Reveal>
         </div>
   )
 }

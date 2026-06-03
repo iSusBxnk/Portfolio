@@ -166,6 +166,8 @@ const SocialCard = ({
                   opacity: isHovered ? 1 : 0,
                   y: isHovered ? 0 : 20,
                 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 transition={{
                   duration: 0.3,
                   delay: isHovered ? index * 0.2 : 0,

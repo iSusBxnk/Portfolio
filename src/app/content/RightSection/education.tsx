@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect } from "react"
 import { useTranslation } from "react-i18next"
+import CountUp from "@/app/components/motion/count-up"
 
 interface EducationProps {
   addSectionId: (sectionId: string) => void
@@ -64,7 +65,9 @@ function Education({ addSectionId }: EducationProps) {
                   </span>
                   <span className="text-lg mt-6 text-white font-semibold">
                     {t("education.gpaLabel")} {` `}{" "}
-                    <span className="text-slate-500  font-normal">{t("education.gpa")}</span>{" "}
+                    <span className="text-slate-500  font-normal">
+                      <CountUp value={3.75} decimals={2} />
+                    </span>{" "}
                     <span className="text-teal-300 font-normal text-sm">({t("education.honors")})</span>
                   </span>
                 </div>

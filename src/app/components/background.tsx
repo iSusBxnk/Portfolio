@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { useEffect, useRef } from "react"
+import ParticleField from "./particle-field"
 
 interface AnimatedBackgroundProps {
   children: React.ReactNode
@@ -156,6 +157,9 @@ export function AnimatedBackground({ children, className = "" }: AnimatedBackgro
         }}
       />
       
+
+      {/* Interactive twinkling constellation */}
+      <ParticleField />
 
       <div className="relative z-10">{children}</div>
     </div>
