@@ -32,14 +32,11 @@ export default function ProjectsPage() {
         {/* Title */}
         <h1 className="text-5xl font-bold text-white mb-12">{t("projects.allTitle")}</h1>
 
-        {/* Table Container with Horizontal Scroll */}
+        {/* Table Container with Horizontal Scroll. min-w keeps the table from
+            shrinking; table-fixed keeps column widths consistent. */}
         <div className="overflow-x-auto">
           <div className="min-w-[1200px]">
-            {" "}
-            {/* Set minimum width to ensure table doesn't shrink */}
             <table className="w-full table-fixed">
-              {" "}
-              {/* Use table-fixed for consistent column widths */}
               <thead>
                 <tr className="">
                   <th className="text-left py-4 px-0 text-sm font-bold text-white w-32">{t("projects.table.year")}</th>

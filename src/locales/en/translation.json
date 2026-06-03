@@ -12,8 +12,13 @@
     "about": "About",
     "education": "Education",
     "experience": "Experience",
+    "techstack": "Tech stack",
     "activity": "Activity",
     "projects": "Projects"
+  },
+  "techStack": {
+    "title": "Tech stack",
+    "subtitle": "Tools and technologies I work with day to day."
   },
   "activity": {
     "title": "GitLab Activity",
@@ -27,13 +32,11 @@
     "tooltipCount": "{{count}} contributions"
   },
   "ui": {
-    "listMenu": "LIST MENU",
-    "tapToClose": "Tap outside to close"
+    "listMenu": "LIST MENU"
   },
   "header": {
     "name": "Chayakorn Phukhiao",
-    "position": "Front End Developer",
-    "description": "A passionate front-end developer dedicated to crafting exceptional digital experiences."
+    "position": "Front End Developer"
   },
   "profile": {
     "title": "Profile",

@@ -9,6 +9,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { ThemeProvider } from "@/app/providers/theme-provider"
 import TranslationsProvider from "@/app/providers/translations-provider"
 import LanguageSwitcher from "@/app/components/language-switcher"
+import ScrollToTop from "@/app/components/scroll-to-top"
 import initTranslations from "@/i18n"
 import i18nConfig from "../../../i18nConfig"
 
@@ -127,6 +128,7 @@ export default async function RootLayout({
             <ThemeProvider>
               <LanguageSwitcher className="hidden lg:flex fixed top-6 right-6 z-50" />
               {children}
+              <ScrollToTop />
             </ThemeProvider>
           </TranslationsProvider>
           <Analytics />

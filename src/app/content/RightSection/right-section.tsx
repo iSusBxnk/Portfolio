@@ -3,6 +3,7 @@ import Project from "./project"
 import About from "./about"
 import Experience from "./experience"
 import Education from "./education"
+import TechStack from "./tech-stack"
 import GitlabActivity from "@/app/components/gitlab-activity"
 import Reveal from "@/app/components/motion/reveal"
 
@@ -15,6 +16,7 @@ export default function RightSection({addSectionId}: RightSectionProps) {
           <Reveal><About addSectionId={addSectionId}/></Reveal>
           <Reveal><Education addSectionId={addSectionId}/></Reveal>
           <Reveal><Experience addSectionId={addSectionId}/></Reveal>
+          <Reveal><TechStack addSectionId={addSectionId}/></Reveal>
           <Reveal><GitlabActivity addSectionId={addSectionId}/></Reveal>
           <Reveal><Project addSectionId={addSectionId}/></Reveal>
         </div>

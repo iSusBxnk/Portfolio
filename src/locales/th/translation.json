@@ -12,8 +12,13 @@
     "about": "เกี่ยวกับ",
     "education": "การศึกษา",
     "experience": "ประสบการณ์",
+    "techstack": "เทคโนโลยี",
     "activity": "กิจกรรม",
     "projects": "ผลงาน"
+  },
+  "techStack": {
+    "title": "เทคโนโลยีที่ใช้",
+    "subtitle": "เครื่องมือและเทคโนโลยีที่ใช้ในการทำงานเป็นประจำ"
   },
   "activity": {
     "title": "กิจกรรมบน GitLab",
@@ -27,13 +32,11 @@
     "tooltipCount": "{{count}} contributions"
   },
   "ui": {
-    "listMenu": "เมนู",
-    "tapToClose": "แตะด้านนอกเพื่อปิด"
+    "listMenu": "เมนู"
   },
   "header": {
     "name": "ชยากร ภูเขียว",
-    "position": "นักพัฒนา Front End",
-    "description": "นักพัฒนา Front End ผู้หลงใหลในการสร้างประสบการณ์ดิจิทัลที่ยอดเยี่ยม"
+    "position": "นักพัฒนา Front End"
   },
   "profile": {
     "title": "โปรไฟล์",

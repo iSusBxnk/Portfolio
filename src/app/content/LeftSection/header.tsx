@@ -22,9 +22,6 @@ export default function Header() {
       <div className="text-xl lg:text-2xl font-medium  text-slate-200">
         <TextReveal text={t("header.position")} />
       </div>
-      <div className="text-slate-400 text-md leading-relaxed md:hidden block">
-        <TextReveal text={t("header.description")} />
-      </div>
     </div>
   )
 }

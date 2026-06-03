@@ -94,12 +94,9 @@ export default function MobileMenu({ menuItems, currentSection }: MobileMenuProp
                 }}
             >
                 <div className="flex flex-col h-full pt-6 px-6">
-                    <div className="mb-8 flex items-center justify-between">
-                        <div>
-                            <h2 className="text-xl font-bold text-slate-200 ">{t("ui.listMenu")}</h2>
-                            <div className="h-px max-w-[200px] bg-gradient-to-r from-teal-400 to-transparent"></div>
-                        </div>
-                        <LanguageSwitcher />
+                    <div className="mb-8">
+                        <h2 className="text-xl font-bold text-slate-200 ">{t("ui.listMenu")}</h2>
+                        <div className="h-px max-w-[200px] bg-gradient-to-r from-teal-400 to-transparent"></div>
                     </div>
 
                     <nav className="flex-1">
@@ -133,9 +130,9 @@ export default function MobileMenu({ menuItems, currentSection }: MobileMenuProp
                     </nav>
 
                     <div className="py-6 border-t border-slate-700">
-                        <p className="text-xs text-slate-500 text-center">
-                            {t("ui.tapToClose")}
-                        </p>
+                        <div className="flex justify-center">
+                            <LanguageSwitcher variant="toggle" />
+                        </div>
                     </div>
                 </div>
             </div>
