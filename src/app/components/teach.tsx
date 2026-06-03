@@ -39,47 +39,50 @@ const FrameworkCard = () => {
   const [tailwindIconTransform, setTailwindIconTransform] = useState("none");
 
   useEffect(() => {
+    let cancelled = false;
+    let timer: ReturnType<typeof setTimeout>;
+
+    // Cancellable sleep so the loop stops cleanly on unmount instead of
+    // firing setState on an unmounted component.
+    const sleep = (ms: number) =>
+      new Promise<void>((resolve) => {
+        timer = setTimeout(resolve, ms);
+      });
+
     const cycleAnimations = async () => {
       const upStyle = "translateY(-3.71px) rotateX(10.71deg) translateZ(20px)";
       const downStyle = "none";
 
       const transitionDuration = 1100;
-
       const durationOfUpState = 1200;
       const delayBetweenCards = 600;
+      const restDuration = transitionDuration + delayBetweenCards;
 
-      while (true) {
-        setReactTransform(upStyle);
-        await new Promise((resolve) => setTimeout(resolve, durationOfUpState));
-        setReactTransform(downStyle);
-        await new Promise((resolve) =>
-          setTimeout(resolve, transitionDuration + delayBetweenCards),
-        );
+      const cards = [
+        setReactTransform,
+        setNextJsTransform,
+        setHtmlTransform,
+        setTailwindIconTransform,
+      ];
 
-        setNextJsTransform(upStyle);
-        await new Promise((resolve) => setTimeout(resolve, durationOfUpState));
-        setNextJsTransform(downStyle);
-        await new Promise((resolve) =>
-          setTimeout(resolve, transitionDuration + delayBetweenCards),
-        );
-
-        setHtmlTransform(upStyle);
-        await new Promise((resolve) => setTimeout(resolve, durationOfUpState));
-        setHtmlTransform(downStyle);
-        await new Promise((resolve) =>
-          setTimeout(resolve, transitionDuration + delayBetweenCards),
-        );
-
-        setTailwindIconTransform(upStyle);
-        await new Promise((resolve) => setTimeout(resolve, durationOfUpState));
-        setTailwindIconTransform(downStyle);
-        await new Promise((resolve) =>
-          setTimeout(resolve, transitionDuration + delayBetweenCards),
-        );
+      while (!cancelled) {
+        for (const setTransform of cards) {
+          setTransform(upStyle);
+          await sleep(durationOfUpState);
+          if (cancelled) return;
+          setTransform(downStyle);
+          await sleep(restDuration);
+          if (cancelled) return;
+        }
       }
     };
 
     cycleAnimations();
+
+    return () => {
+      cancelled = true;
+      clearTimeout(timer);
+    };
   }, []);
 
   const cardClasses =

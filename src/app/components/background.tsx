@@ -44,7 +44,7 @@ export function AnimatedBackground({ children, className = "" }: AnimatedBackgro
        {/* <div 
         className="fixed inset-0 pointer-events-none z-[0.1] opacity-[0.07]"
         style={{
-          backgroundImage: 'url(/Art.gif)',
+          backgroundImage: 'url(/images/Art.webp)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'

@@ -1,0 +1,14 @@
+{
+  "image": "/images/profile02.webp",
+  "title": "Profile",
+  "name": "Chayakorn Phukhiao",
+  "position": "Front End Developer",
+  "pitch": "",
+  "link": "https://www.linkedin.com/in/chayakorn-phukhiao-913652276/",
+  "href": "#about",
+  "buttons": [
+    { "label": "Download CV", "icon": "download", "link": "/Resume.pdf" },
+    { "label": "Email", "icon": "mail", "link": "mailto:chayakon.code@gmail.com" },
+    { "label": "Instagram", "icon": "instagram", "link": "https://www.instagram.com/tabxnk_/" }
+  ]
+}

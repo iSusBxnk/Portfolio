@@ -20,12 +20,12 @@ export default function FloatingClouds() {
 
   const clouds: CloudData[] = [
     // { id: 1, src: "/clouds/cloud1.webp", size: 600, initialX: 20, initialY: 10, speed: 0.8, direction: 1, depth: 0.4 },
-    { id: 2, src: "/clouds/cloud2.png", size: 450, initialX: 70, initialY: 25, speed: 0.6, direction: -1, depth: 0.6 },
-    { id: 3, src: "/clouds/cloud3.png", size: 700, initialX: 50, initialY: 40, speed: 0.7, direction: 1, depth: 0.3 },
-    { id: 4, src: "/clouds/cloud4.png", size: 580, initialX: 30, initialY: 15, speed: 0.5, direction: 1, depth: 0.5 },
-    { id: 5, src: "/clouds/cloud5.png", size: 560, initialX: 10, initialY: 35, speed: 0.4, direction: -1, depth: 0.7 },
+    { id: 2, src: "/clouds/cloud2.webp", size: 450, initialX: 70, initialY: 25, speed: 0.6, direction: -1, depth: 0.6 },
+    { id: 3, src: "/clouds/cloud3.webp", size: 700, initialX: 50, initialY: 40, speed: 0.7, direction: 1, depth: 0.3 },
+    { id: 4, src: "/clouds/cloud4.webp", size: 580, initialX: 30, initialY: 15, speed: 0.5, direction: 1, depth: 0.5 },
+    { id: 5, src: "/clouds/cloud5.webp", size: 560, initialX: 10, initialY: 35, speed: 0.4, direction: -1, depth: 0.7 },
     // { id: 6, src: "/clouds/cloud6.webp", size: 620, initialX: 80, initialY: 50, speed: 0.3, direction: -1, depth: 0.8 },
-    { id: 7, src: "/clouds/cloud7.png", size: 940, initialX: 60, initialY: 70, speed: 0.2, direction: 1, depth: 0.9 },
+    { id: 7, src: "/clouds/cloud7.webp", size: 940, initialX: 60, initialY: 70, speed: 0.2, direction: 1, depth: 0.9 },
   ]
 
   useEffect(() => {

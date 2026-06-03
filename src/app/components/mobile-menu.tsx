@@ -1,6 +1,8 @@
 "use client"
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
+import { useTranslation } from "react-i18next"
+import LanguageSwitcher from "./language-switcher"
 
 interface MobileMenuProps {
     menuItems: string[];
@@ -8,6 +10,7 @@ interface MobileMenuProps {
 }
 
 export default function MobileMenu({ menuItems, currentSection }: MobileMenuProps) {
+    const { t } = useTranslation()
     const [isOpen, setIsOpen] = useState(false)
     const [isMouseEnter, setIsMouseEnter] = useState<{ [key: string]: boolean }>({});
 
@@ -91,9 +94,12 @@ export default function MobileMenu({ menuItems, currentSection }: MobileMenuProp
                 }}
             >
                 <div className="flex flex-col h-full pt-6 px-6">
-                    <div className="mb-8">
-                        <h2 className="text-xl font-bold text-slate-200 ">LIST MENU</h2>
-                        <div className="h-px max-w-[200px] bg-gradient-to-r from-teal-400 to-transparent"></div>
+                    <div className="mb-8 flex items-center justify-between">
+                        <div>
+                            <h2 className="text-xl font-bold text-slate-200 ">{t("ui.listMenu")}</h2>
+                            <div className="h-px max-w-[200px] bg-gradient-to-r from-teal-400 to-transparent"></div>
+                        </div>
+                        <LanguageSwitcher />
                     </div>
 
                     <nav className="flex-1">
@@ -119,7 +125,7 @@ export default function MobileMenu({ menuItems, currentSection }: MobileMenuProp
                                                     : "bg-slate-400 w-8"
                                                 }`}
                                         ></div>
-                                        <span className="text-sm font-bold uppercase tracking-widest">{item}</span>
+                                        <span className="text-sm font-bold uppercase tracking-widest">{t(`nav.${item.toLowerCase()}`)}</span>
                                     </button>
                                 </li>
                             ))}
@@ -128,7 +134,7 @@ export default function MobileMenu({ menuItems, currentSection }: MobileMenuProp
 
                     <div className="py-6 border-t border-slate-700">
                         <p className="text-xs text-slate-500 text-center">
-                            Tap outside to close
+                            {t("ui.tapToClose")}
                         </p>
                     </div>
                 </div>

@@ -1,25 +1,35 @@
 import { ArrowUpRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+
+export type Localized = { en: string; th: string }
+
 export interface Project {
     id: string
-    title: string
-    description: string
+    title: Localized
+    description: Localized
     image: string
     technologies: string[]
     link?: string
-    year?: string
+    year?: Localized
+}
+
+// Pick the string for the active locale, falling back to English.
+export function pickLocale(value: Localized | undefined, locale: string): string {
+    if (!value) return ""
+    return value[locale === "th" ? "th" : "en"] ?? value.en
 }
 
 interface ProjectCardProps {
     project: Project
+    locale: string
     isHovered: boolean
     onHover: () => void
     onLeave: () => void
     isDimmed: boolean
 }
 
-export function ProjectCard({ project, onHover, onLeave, isDimmed }: ProjectCardProps) {
+export function ProjectCard({ project, locale, onHover, onLeave, isDimmed }: ProjectCardProps) {
     return (
         <Link href={project.link || "#"} target="_blank">
             <div
@@ -39,7 +49,7 @@ export function ProjectCard({ project, onHover, onLeave, isDimmed }: ProjectCard
                         <div className="w-50 flex items-start justify-start">
                             <div className="flex flex-col-reverse md:flex-col gap-4">
                                 <p className="text-slate-400 text-sm text-start font-extrabold group-hover:text-teal-300 transition-colors">
-                                    {project.year}
+                                    {pickLocale(project.year, locale)}
                                 </p>
                                 <Image
                                     src={project.image || "https://placehold.co/600x400"}
@@ -52,12 +62,12 @@ export function ProjectCard({ project, onHover, onLeave, isDimmed }: ProjectCard
                         </div>
                         <div className="flex-1 space-y-3">
                             <h3 className="text-white font-medium group-hover:text-teal-300 transition-colors flex items-center">
-                                {project.title}
+                                {pickLocale(project.title, locale)}
                                 {project.link && (
                                     <ArrowUpRight className="ml-2 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 )}
                             </h3>
-                            <p className="text-slate-400 text-sm leading-relaxed">{project.description}</p>
+                            <p className="text-slate-400 text-sm leading-relaxed">{pickLocale(project.description, locale)}</p>
                             <div className="flex flex-wrap gap-2">
                                 {project.technologies.map((tech, index) => (
                                     <span key={index} className="px-3 py-1 text-xs font-medium bg-white/10 text-teal-300 rounded-full">

@@ -1,41 +1,48 @@
+"use client"
+import type { ReactNode } from "react"
+import { useTranslation } from "react-i18next"
 import Menu from "./menu"
 import Header from "./header"
-// import Contact from "./contact"
 import Profile from "./contactCard"
-import { Download , Mail, User, Instagram } from "lucide-react"
+import { Download, Mail, User, Instagram } from "lucide-react"
+import profileData from "@/app/data/profile.json"
+
 interface LeftSectionProps {
   menuItems: string[]
   currentSection: string
 }
 
-const profile = {
-  image: "/peeps-avatar.png",
-  title: "Profile",
-  name: "Chayakorn Phukhiao",
-  position: "Front End Developer",
-  pitch: "",
-  link: "https://www.linkedin.com/in/chayakorn-phukhiao-913652276/",
-  icon: <User className="h-4 w-4 text-white" />,
-  href:"#about",
-  buttons: [
-    {
-      label: "Download CV",
-      icon: <Download className="h-4 w-4" />,
-      link: "/Resume.pdf"
-    },
-    {
-      label: "Email",
-      icon: <Mail className="h-4 w-4" />,
-      link: "mailto:chayakon.code@gmail.com"
-    },{
-      label: "Instagram",
-      icon: <Instagram className="h-4 w-4" />,
-      link: "https://www.instagram.com/tabxnk_/"
-    }
-  ]
+// Map serializable icon keys from profile.json to lucide components.
+const ICONS: Record<string, ReactNode> = {
+  download: <Download className="h-4 w-4" />,
+  mail: <Mail className="h-4 w-4" />,
+  instagram: <Instagram className="h-4 w-4" />,
+  user: <User className="h-4 w-4 text-white" />,
+}
+
+// Map icon keys to translation keys for the button labels.
+const LABEL_KEYS: Record<string, string> = {
+  download: "profile.downloadCv",
+  mail: "profile.email",
+  instagram: "profile.instagram",
 }
 
 export default function LeftSection({ menuItems, currentSection }: LeftSectionProps) {
+  const { t } = useTranslation()
+
+  const profile = {
+    ...profileData,
+    title: t("profile.title"),
+    name: t("header.name"),
+    position: t("header.position"),
+    icon: ICONS.user,
+    buttons: profileData.buttons.map((button) => ({
+      label: t(LABEL_KEYS[button.icon] ?? button.label),
+      link: button.link,
+      icon: ICONS[button.icon],
+    })),
+  }
+
   return (
     <div>
       <div className="sticky top-24 grid lg:grid-rows-[35%_45%_20%] lg:h-[87vh] gap-4 lg:gap-0 mb-16 lg:mb-0">
@@ -50,12 +57,10 @@ export default function LeftSection({ menuItems, currentSection }: LeftSectionPr
           pitch={profile.pitch}
           buttons={profile.buttons}
           icon={profile.icon}
-          // href={profile.href}
         />
        </div>
        </div>
         <Menu menuItems={menuItems.map((item) => ({ id: item, label: item }))} currentSection={currentSection} />
-        {/* <Contact /> */}
       </div>
     </div>
   )

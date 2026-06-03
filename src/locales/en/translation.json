@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "about": "About",
+    "education": "Education",
+    "experience": "Experience",
+    "activity": "Activity",
+    "projects": "Projects"
+  },
+  "activity": {
+    "title": "GitLab Activity",
+    "subtitle": "{{count}} contributions in the last year",
+    "less": "Less",
+    "more": "More",
+    "loading": "Loading activity…",
+    "error": "Couldn't load activity right now.",
+    "tooltipNone": "No contributions",
+    "tooltipCount": "{{count}} contributions"
+  },
+  "ui": {
+    "listMenu": "LIST MENU",
+    "tapToClose": "Tap outside to close"
+  },
+  "header": {
+    "name": "Chayakorn Phukhiao",
+    "position": "Front End Developer",
+    "description": "A passionate front-end developer dedicated to crafting exceptional digital experiences."
+  },
+  "profile": {
+    "title": "Profile",
+    "contactMe": "Contact me",
+    "downloadCv": "Download CV",
+    "email": "Email",
+    "instagram": "Instagram"
+  },
+  "about": {
+    "title": "About me",
+    "p1": "I am a <1>Frontend Web Developer</1> who is passionate about creating great experiences that are well-balanced and appropriately designed in every dimension, paying attention to every pixel detail to deliver user interfaces that are accessible and easy to use, while committed to building high-performance websites that follow best development practices to create sustainable solutions that truly serve users' needs.",
+    "p2": "Currently, I work as a Junior Front-End Developer at <1>SPACETRAX CO., LTD.</1> My primary responsibilities include developing and maintaining UI components to align with specified designs, as well as writing code according to systematically designed workflows. I prioritize web accessibility standards and best practices to ensure users receive the most comprehensive and efficient experience from every project we develop."
+  },
+  "education": {
+    "title": "Education",
+    "period": "2022 - 2025",
+    "degree": "Bachelor's Degree",
+    "universityLabel": "University",
+    "university": "Rajamangala University of Technology Lanna",
+    "majorLabel": "Major",
+    "major": "Information Technology",
+    "gpaLabel": "GPA",
+    "gpa": "3.75",
+    "honors": "First-Class Honours"
+  },
+  "experience": {
+    "title": "Experience",
+    "period": "2025 — Present",
+    "role": "Junior Frontend Developer • Sme Profile",
+    "description": "My main responsibilities include creating the user-facing web pages, connecting to backend APIs to fetch and send data, and implementing Figma designs into functional websites. Daily, I write TypeScript, Tailwind CSS, Material-UI, Next.js, and React code to build responsive user interfaces, work with REST APIs to display dynamic content, and ensure the final output precisely matches the designer's vision."
+  },
+  "projects": {
+    "title": "Project",
+    "viewArchive": "View Full Project Archive",
+    "allTitle": "All Projects",
+    "back": "Back to home",
+    "table": {
+      "year": "Year",
+      "project": "Project",
+      "description": "Description",
+      "technology": "Technology",
+      "link": "Link"
+    }
+  }
+}

@@ -10,11 +10,16 @@
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "i18next": "^23.16.8",
+    "i18next-resources-to-backend": "^1.2.1",
     "lucide-react": "^0.517.0",
     "motion": "^12.23.22",
     "next": "15.1.4",
+    "next-i18n-router": "^5.5.8",
+    "next-view-transitions": "^0.3.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-i18next": "^15.7.4",
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {

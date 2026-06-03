@@ -6,6 +6,7 @@ import { cn } from "@/app/lib/utils";
 import { useState,useEffect } from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import TextShimmer from "@/app/components/typography/text-shrim";
 
 interface SocialCardProps {
@@ -33,6 +34,7 @@ const SocialCard = ({
   icon,
   buttons,
 }: SocialCardProps) => {
+  const { t } = useTranslation();
   const [isHovered, setHovered] = useState(false);
 
   useEffect(() => {
@@ -47,7 +49,7 @@ const SocialCard = ({
   return (
     <>
        <motion.div
-        className="fixed inset-0 bg-black/50 backdrop-blur-md z-40"
+        className="fixed inset-0 bg-black/50 backdrop-blur-md z-[90]"
         initial={{ opacity: 0 }}
         animate={{ opacity: isHovered ? 1 : 0 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -55,7 +57,7 @@ const SocialCard = ({
       />
     <motion.div
       className={cn(
-        `group relative h-[330px] overflow-hidden rounded-lg p-0 w-[330px] z-50 `,
+        `group relative h-[330px] overflow-hidden rounded-lg p-0 w-[330px] z-[100] `,
         "border-2 border-gray-50/5 bg-black/10 backdrop-blur-sm hover:cursor-pointer",
         "shadow-sm transition-shadow duration-300 hover:shadow-lg",
         className,
@@ -146,7 +148,7 @@ const SocialCard = ({
       >
         <div className="text-neutral-900 ">
           <div className="mb-2 flex items-center justify-between text-sm font-semibold text-white ">
-            <span>Contact me</span>
+            <span>{t("profile.contactMe")}</span>
             <span>
             <ArrowUpRight className="ml-2 h-4 w-4 opacity-100 group-hover:opacity-100 transition-opacity" />
             </span>

@@ -1,5 +1,6 @@
 "use client"
 import { useState, useEffect } from "react"
+import { useTranslation } from "react-i18next"
 
 interface MenuItemProps {
   menuItems: { id: string; label: string }[]
@@ -7,6 +8,7 @@ interface MenuItemProps {
 }
 
 export default function Menu({ menuItems, currentSection }: MenuItemProps) {
+  const { t } = useTranslation()
   const [bounceClass, setBounceClass] = useState("")
   const [isMouseEnter, setIsMouseEnter] = useState<{ [key: string]: boolean }>({})
 
@@ -49,7 +51,7 @@ export default function Menu({ menuItems, currentSection }: MenuItemProps) {
                   : "bg-slate-400 w-8"
             } transition-all duration-200`}
           ></div>
-          <span className="text-sm font-bold uppercase tracking-widest">{item.label}</span>
+          <span className="text-sm font-bold uppercase tracking-widest">{t(`nav.${item.id.toLowerCase()}`)}</span>
         </button>
       ))}
     </div>

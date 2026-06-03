@@ -1,29 +1,56 @@
 [
-    {
+  {
     "id": "SME Connext Dashboard v.2",
-    "title": "SME Connext Dashboard v.2",
-    "description": "The Office of Small and Medium Enterprises Promotion (OSMEP) develops web applications and digital platforms such as SME Single Platform and SME Big Data Dashboard to serve as a comprehensive service center for Thai SME entrepreneurs.",
-    "image": "/smeconnext.png",
-    "technologies": ["NextJS","TypeScript", "MUI","AWS","Docker"],
+    "title": {
+      "en": "SME Connext Dashboard v.2",
+      "th": "SME Connext Dashboard v.2"
+    },
+    "description": {
+      "en": "The Office of Small and Medium Enterprises Promotion (OSMEP) develops web applications and digital platforms such as SME Single Platform and SME Big Data Dashboard to serve as a comprehensive service center for Thai SME entrepreneurs.",
+      "th": "สำนักงานส่งเสริมวิสาหกิจขนาดกลางและขนาดย่อม (สสว.) พัฒนาเว็บแอปพลิเคชันและแพลตฟอร์มดิจิทัล เช่น SME Single Platform และ SME Big Data Dashboard เพื่อเป็นศูนย์บริการครบวงจรสำหรับผู้ประกอบการ SME ไทย"
+    },
+    "image": "/images/smeconnext.webp",
+    "technologies": ["NextJS", "TypeScript", "MUI", "ApexChart"],
     "link": "https://uat.smeconnext.com/login",
-    "year": "2025 - PRESENT"
+    "year": {
+      "en": "2025 - PRESENT",
+      "th": "2025 - ปัจจุบัน"
+    }
   },
   {
     "id": "SME Profile Dashboard v.2",
-    "title": "SME Profile Dashboard v.2",
-    "description": "A centralized database website that consolidates data from SMEs (Small and Medium Enterprises) and government agencies to enable data integration and utilization for analyzing entrepreneurial demand trends and efficiently presenting government services and support.",
-    "image": "/smeprofile.png",
-    "technologies": ["NextJS","TypeScript", "TailwindCSS", "Golang", "AWS","PostgreSQL","Docker"],
+    "title": {
+      "en": "SME Profile Dashboard v.2",
+      "th": "SME Profile Dashboard v.2"
+    },
+    "description": {
+      "en": "A centralized database website that consolidates data from SMEs (Small and Medium Enterprises) and government agencies to enable data integration and utilization for analyzing entrepreneurial demand trends and efficiently presenting government services and support.",
+      "th": "เว็บไซต์ฐานข้อมูลกลางที่รวบรวมข้อมูลจากผู้ประกอบการ SME และหน่วยงานภาครัฐ เพื่อบูรณาการและนำข้อมูลไปใช้วิเคราะห์แนวโน้มความต้องการของผู้ประกอบการ พร้อมนำเสนอบริการและการสนับสนุนจากภาครัฐได้อย่างมีประสิทธิภาพ"
+    },
+    "image": "/images/smeprofile.webp",
+    "technologies": ["NextJS", "TypeScript", "TailwindCSS", "ApexChart"],
     "link": "https://smeprofile.org/login",
-     "year": "2025 - PRESENT"
+    "year": {
+      "en": "2025 - PRESENT",
+      "th": "2025 - ปัจจุบัน"
+    }
   },
-    {
+  {
     "id": "Lanna-Koyori Project",
-    "title": "Lanna-Koyori Project",
-    "description": "Koyori project website, a collaboration between Thai and Japanese designers with artisans in Northern Thailand, operated under the Lanna Culture and Handicraft Association (LCCA) and Rajamangala University of Technology Lanna.",
-    "image": "/koyori.png",
-    "technologies": ["NextJS","TypeScript", "TailwindCSS", "PostgreSQL","Supabase"],
+    "title": {
+      "en": "Lanna-Koyori Project",
+      "th": "Lanna-Koyori Project"
+    },
+    "description": {
+      "en": "Koyori project website, a collaboration between Thai and Japanese designers with artisans in Northern Thailand, operated under the Lanna Culture and Handicraft Association (LCCA) and Rajamangala University of Technology Lanna.",
+      "th": "เว็บไซต์โครงการ Koyori ความร่วมมือระหว่างนักออกแบบชาวไทยและญี่ปุ่นกับช่างฝีมือในภาคเหนือของประเทศไทย ดำเนินงานภายใต้สมาคมวัฒนธรรมและหัตถกรรมล้านนา (LCCA) และมหาวิทยาลัยเทคโนโลยีราชมงคลล้านนา"
+    },
+    "image": "/images/koyori.webp",
+    "technologies": ["NextJS", "TypeScript", "TailwindCSS", "Supabase"],
     "link": "https://www.lannakoyori.org/",
-    "year" : "NOV 2024 – MAY 2025"
+    "year": {
+      "en": "NOV 2024 – MAY 2025",
+      "th": "พ.ย. 2024 – พ.ค. 2025"
+    }
   }
 ]

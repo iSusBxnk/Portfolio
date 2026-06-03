@@ -1,43 +1,51 @@
 "use client"
-import Link from 'next/link'
-import React, { useEffect } from 'react'
-
+import Link from "next/link"
+import React, { useEffect } from "react"
+import { Trans, useTranslation } from "react-i18next"
 
 interface AboutProps {
-    addSectionId: (sectionId: string) => void;
+  addSectionId: (sectionId: string) => void
 }
 
-
-const SECTION_ID = 'about'
+const SECTION_ID = "about"
 function About({ addSectionId }: AboutProps) {
+  const { t } = useTranslation()
 
-    useEffect(() => {
-        addSectionId(SECTION_ID)
-    }, [addSectionId])
+  useEffect(() => {
+    addSectionId(SECTION_ID)
+  }, [addSectionId])
 
-    return (
-        <section id={SECTION_ID} className="scroll-mt-8 lg:scroll-m-24">
-            <div className="pb-4 text-xl text-white font-bold">
-                <p className="text-xl text-white font-pbold">About me</p>
-                {/* <TextShimmer>About me</TextShimmer> */}
-            </div>
-            <div className="space-y-4 text-slate-400 leading-relaxed">
-                <p>
-                    I am a <span className='text-white hover:text-teal-300 cursor-pointer '>Frontend Web Developer</span> who is passionate about creating great experiences that are well-balanced and appropriately designed in every dimension,
-                    paying attention to every pixel detail to deliver user interfaces that are accessible and easy to use,
-                    while committed to building high-performance websites that follow best development practices to create sustainable solutions that truly serve users&#39; needs.
-                </p>
-                <p>
-                    Currently, I work as a Junior Front-End Developer at <span className='text-white hover:text-teal-300 font-semibold cursor-pointer duration-0'>
-                        <Link href="https://spacetrax.co/" target="_blank">SPACETRAX CO., LTD.</Link>
-                        </span> {""}
-                    My primary responsibilities include developing and maintaining UI components to align with specified designs, as well as writing code according to systematically designed workflows. I prioritize web accessibility standards and best practices to ensure users receive the most comprehensive and
-                    efficient experience from every project we develop.
-                </p>
-            </div>
-
-        </section>
-    )
+  return (
+    <section id={SECTION_ID} className="scroll-mt-8 lg:scroll-m-24">
+      <div className="pb-4 text-xl text-white font-bold">
+        <p className="text-xl text-white font-pbold">{t("about.title")}</p>
+      </div>
+      <div className="space-y-4 text-slate-400 leading-relaxed">
+        <p>
+          <Trans
+            i18nKey="about.p1"
+            components={{
+              1: <span className="text-white hover:text-teal-300 cursor-pointer" />,
+            }}
+          />
+        </p>
+        <p>
+          <Trans
+            i18nKey="about.p2"
+            components={{
+              1: (
+                <Link
+                  href="https://spacetrax.co/"
+                  target="_blank"
+                  className="text-white hover:text-teal-300 font-semibold cursor-pointer duration-0"
+                />
+              ),
+            }}
+          />
+        </p>
+      </div>
+    </section>
+  )
 }
 
 export default About
